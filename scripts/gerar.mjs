@@ -1,9 +1,14 @@
 #!/usr/bin/env node
-// Gera as notas de atualização a partir das issues concluídas no Linear.
+// Gera as notas de atualização a partir das issues em produção no Linear.
 //
-// Fluxo: lê a marca-d'água em estado.json → busca issues concluídas desde então
-// (time Numih) → classifica/redige via OpenRouter → escreve notas/*.md →
-// avança a marca-d'água (incondicionalmente, mesmo em semana vazia).
+// Fluxo: lê a marca-d'água em estado.json → busca issues do time Numih no
+// estado "Produção" tocadas desde então (o filtro é por `updatedAt`, porque
+// `completedAt` não muda na transição Homologado→Produção) → desconta as já
+// processadas (publicadas.json) → classifica/redige via OpenRouter → escreve
+// notas/*.md → avança a marca-d'água (incondicionalmente, mesmo em semana vazia).
+//
+// Estados "Homologado" e "Concluído" ficam de fora por decisão: só o que o
+// time moveu para "Produção" está, de fato, nas mãos do cliente.
 //
 // Uso:
 //   node scripts/gerar.mjs              # execução semanal (uma nota datada de hoje)
@@ -32,7 +37,7 @@ function obrigatoria(nome) {
 
 // ---------------------------------------------------------------- Linear ---
 
-async function buscarIssuesConcluidas(desde) {
+async function buscarIssuesEmProducao(desde) {
   const query = `
     query($after: String, $filter: IssueFilter) {
       issues(first: 100, after: $after, filter: $filter) {
@@ -48,8 +53,8 @@ async function buscarIssuesConcluidas(desde) {
     }`;
   const filter = {
     team: { name: { eq: "Numih" } },
-    state: { type: { eq: "completed" } },
-    completedAt: { gt: desde },
+    state: { name: { eq: "Produção" } },
+    updatedAt: { gt: desde },
   };
 
   const issues = [];
@@ -235,11 +240,18 @@ function escreverNota(arquivo, data, titulo, itens) {
 // ------------------------------------------------------------------ main ---
 
 const estado = JSON.parse(readFileSync(join(RAIZ, "estado.json"), "utf8"));
+const caminhoPublicadas = join(RAIZ, "publicadas.json");
+const publicadas = new Set(
+  existsSync(caminhoPublicadas) ? JSON.parse(readFileSync(caminhoPublicadas, "utf8")) : []
+);
 const agora = new Date().toISOString();
 
-console.log(`Buscando issues concluídas desde ${estado.marcaDagua}…`);
-const brutas = await buscarIssuesConcluidas(estado.marcaDagua);
-console.log(`${brutas.length} issues concluídas no período.`);
+console.log(`Buscando issues em Produção tocadas desde ${estado.marcaDagua}…`);
+const tocadas = await buscarIssuesEmProducao(estado.marcaDagua);
+// O filtro por updatedAt também captura issues antigas de Produção que apenas
+// receberam um comentário ou label; o registro de processadas as elimina.
+const brutas = tocadas.filter((i) => !publicadas.has(i.identifier));
+console.log(`${tocadas.length} issues na janela; ${brutas.length} ainda não processadas.`);
 const issues = prepararIssues(brutas);
 console.log(`${issues.length} candidatas após o de-para de módulos.`);
 
@@ -268,7 +280,12 @@ if (issues.length > 0) {
   console.log("Nada relevante no período; nenhuma nota gerada.");
 }
 
+// Toda issue buscada entra no registro — inclusive as descartadas pelo de-para
+// ou pelo modelo — para nunca ser reenviada em execuções futuras.
+for (const issue of brutas) publicadas.add(issue.identifier);
+writeFileSync(caminhoPublicadas, JSON.stringify([...publicadas].sort(), null, 2) + "\n");
+
 // Marca-d'água avança sempre, mesmo em semana vazia — o commit resultante
 // mantém o cron do GitHub ativo (repositórios inativos têm o cron suspenso).
 writeFileSync(join(RAIZ, "estado.json"), JSON.stringify({ marcaDagua: agora }, null, 2) + "\n");
-console.log(`Marca-d'água avançada para ${agora}.`);
+console.log(`Marca-d'água avançada para ${agora}; registro com ${publicadas.size} issues.`);
