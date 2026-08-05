@@ -34,7 +34,7 @@ concurrency:
 
 env:
   # Modelo usado via OpenRouter — troque aqui para experimentar outro.
-  OPENROUTER_MODEL: anthropic/claude-sonnet-4.5
+  OPENROUTER_MODEL: google/gemini-3.5-flash-lite
 
 jobs:
   notas:
