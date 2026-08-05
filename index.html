@@ -48,8 +48,10 @@
   .selo.novidade { background: var(--novidade-f); color: var(--novidade-t); }
   .selo.melhoria { background: var(--melhoria-f); color: var(--melhoria-t); }
   .selo.correcao { background: var(--correcao-f); color: var(--correcao-t); }
+  .refs { font: .75rem/1 ui-monospace, "SF Mono", "Cascadia Mono", monospace; color: var(--suave); white-space: nowrap; }
   .vazio { color: var(--suave); }
   footer { margin-top: 4rem; font-size: .8rem; color: var(--suave); }
+  footer a { color: inherit; }
   [hidden] { display: none !important; }
 </style>
 </head>
@@ -79,19 +81,19 @@
         <section data-modulo="CRM">
           <h3>CRM</h3>
           <ul>
-            <li><span class="selo novidade">Novidade</span> Agora a caixa de entrada de conversas está escopada por usuário e o gestor conta com uma visão global de todas as interações.</li>
+            <li><span class="selo novidade">Novidade</span> Agora a caixa de entrada de conversas está escopada por usuário e o gestor conta com uma visão global de todas as interações. <span class="refs">NUM-879</span></li>
           </ul>
         </section>
         <section data-modulo="Hospitalar">
           <h3>Hospitalar</h3>
           <ul>
-            <li><span class="selo novidade">Novidade</span> Adicionada a funcionalidade de habilitação de medicamentos e inclusão no payload de autorização para automações.</li>
+            <li><span class="selo novidade">Novidade</span> Adicionada a funcionalidade de habilitação de medicamentos e inclusão no payload de autorização para automações. <span class="refs">NUM-742</span></li>
           </ul>
         </section>
         <section data-modulo="Notificações">
           <h3>Notificações</h3>
           <ul>
-            <li><span class="selo novidade">Novidade</span> Agora o sistema envia notificações por push no navegador, inclusive em dispositivos móveis.</li>
+            <li><span class="selo novidade">Novidade</span> Agora o sistema envia notificações por push no navegador, inclusive em dispositivos móveis. <span class="refs">NUM-870, NUM-872</span></li>
           </ul>
         </section>
       </article>
@@ -102,40 +104,40 @@
         <section data-modulo="Checklist">
           <h3>Checklist</h3>
           <ul>
-            <li><span class="selo novidade">Novidade</span> Implementada a leitura offline de fluxos de campo e o upload offline de fotos e anexos.</li>
-            <li><span class="selo correcao">Correção</span> Corrigido o erro ao editar formulários com acesso público ativado.</li>
-            <li><span class="selo correcao">Correção</span> Corrigida a paginação e a contagem total de respostas no Dashboard Ao Vivo.</li>
-            <li><span class="selo correcao">Correção</span> Corrigida a exibição do texto das opções em gráficos analíticos de campos de caixa de seleção.</li>
-            <li><span class="selo correcao">Correção</span> Padronizada a tradução do termo anônimo na listagem de respostas de formulários.</li>
+            <li><span class="selo novidade">Novidade</span> Implementada a leitura offline de fluxos de campo e o upload offline de fotos e anexos. <span class="refs">NUM-747</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o erro ao editar formulários com acesso público ativado. <span class="refs">NUM-796</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida a paginação e a contagem total de respostas no Dashboard Ao Vivo. <span class="refs">NUM-669</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida a exibição do texto das opções em gráficos analíticos de campos de caixa de seleção. <span class="refs">NUM-645</span></li>
+            <li><span class="selo correcao">Correção</span> Padronizada a tradução do termo anônimo na listagem de respostas de formulários. <span class="refs">NUM-457</span></li>
           </ul>
         </section>
         <section data-modulo="Hospitalar">
           <h3>Hospitalar</h3>
           <ul>
-            <li><span class="selo novidade">Novidade</span> Renomeada a nomenclatura de operadoras para convênios e adicionados novos tipos de convênio ao cadastro.</li>
+            <li><span class="selo novidade">Novidade</span> Renomeada a nomenclatura de operadoras para convênios e adicionados novos tipos de convênio ao cadastro. <span class="refs">NUM-689</span></li>
           </ul>
         </section>
         <section data-modulo="PABX">
           <h3>PABX</h3>
           <ul>
-            <li><span class="selo novidade">Novidade</span> Disponibilizada a integração automática de PABX por tenant com o provisionador de infraestrutura.</li>
+            <li><span class="selo novidade">Novidade</span> Disponibilizada a integração automática de PABX por tenant com o provisionador de infraestrutura. <span class="refs">NUM-762, NUM-758, NUM-759</span></li>
           </ul>
         </section>
         <section data-modulo="Tarefas">
           <h3>Tarefas</h3>
           <ul>
-            <li><span class="selo novidade">Novidade</span> Adicionado o controle de timeout, varredura periódica e notificação para pendências de integração externas.</li>
+            <li><span class="selo novidade">Novidade</span> Adicionado o controle de timeout, varredura periódica e notificação para pendências de integração externas. <span class="refs">NUM-740</span></li>
           </ul>
         </section>
         <section data-modulo="Plataforma">
           <h3>Plataforma</h3>
           <ul>
-            <li><span class="selo melhoria">Melhoria</span> Adicionada a persistência de cache local e a fila de envio offline para operações em campo.</li>
-            <li><span class="selo correcao">Correção</span> Corrigido o vínculo de acesso por departamento em convites após o primeiro login do usuário.</li>
+            <li><span class="selo melhoria">Melhoria</span> Adicionada a persistência de cache local e a fila de envio offline para operações em campo. <span class="refs">NUM-746, NUM-745, NUM-744</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o vínculo de acesso por departamento em convites após o primeiro login do usuário. <span class="refs">NUM-752</span></li>
           </ul>
         </section>
       </article>
-  <footer>© Numih. Atualizado automaticamente a cada publicação em produção.</footer>
+  <footer><a href="https://numih.com">numih.com</a></footer>
 </main>
 <script>
   const seletor = document.getElementById("filtro-modulo");

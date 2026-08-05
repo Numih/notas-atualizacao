@@ -46,8 +46,11 @@ function analisarNota(nome, conteudo) {
     }
     const item = linha.match(/^-\s+\*\*(Novidade|Melhoria|Correção)\*\*\s+—\s+(.+)$/);
     if (item && atual) {
+      const refs = [...item[2].matchAll(/<!--\s*(.*?)\s*-->/g)]
+        .flatMap((m) => m[1].split(",").map((r) => r.trim()))
+        .filter((r) => /^NUM-\d+$/.test(r));
       const texto = item[2].replace(/<!--.*?-->/g, "").trim();
-      atual.itens.push({ tipo: item[1], texto });
+      atual.itens.push({ tipo: item[1], texto, refs });
     }
   }
   return { data: meta.data, titulo: meta.titulo, secoes: secoes.filter((s) => s.itens.length) };
@@ -80,7 +83,11 @@ const corpoNotas = notas.length
             ${secao.itens
               .map(
                 (item) =>
-                  `<li><span class="selo ${CLASSE_TIPO[item.tipo]}">${item.tipo}</span> ${escapar(item.texto)}</li>`
+                  `<li><span class="selo ${CLASSE_TIPO[item.tipo]}">${item.tipo}</span> ${escapar(item.texto)}${
+                    item.refs.length
+                      ? ` <span class="refs">${item.refs.map(escapar).join(", ")}</span>`
+                      : ""
+                  }</li>`
               )
               .join("\n            ")}
           </ul>
@@ -152,8 +159,10 @@ const html = `<!doctype html>
   .selo.novidade { background: var(--novidade-f); color: var(--novidade-t); }
   .selo.melhoria { background: var(--melhoria-f); color: var(--melhoria-t); }
   .selo.correcao { background: var(--correcao-f); color: var(--correcao-t); }
+  .refs { font: .75rem/1 ui-monospace, "SF Mono", "Cascadia Mono", monospace; color: var(--suave); white-space: nowrap; }
   .vazio { color: var(--suave); }
   footer { margin-top: 4rem; font-size: .8rem; color: var(--suave); }
+  footer a { color: inherit; }
   [hidden] { display: none !important; }
 </style>
 </head>
@@ -165,7 +174,7 @@ const html = `<!doctype html>
   </header>
   ${filtro}
   ${corpoNotas}
-  <footer>© Numih. Atualizado automaticamente a cada publicação em produção.</footer>
+  <footer><a href="https://numih.com">numih.com</a></footer>
 </main>
 <script>
   const seletor = document.getElementById("filtro-modulo");

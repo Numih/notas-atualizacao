@@ -20,7 +20,7 @@ Formato de cada item (o selo e o travessão importam para a renderização):
 - **Novidade** — Agora é possível estornar baixas em lote. <!-- NUM-123 -->
 ```
 
-O comentário HTML guarda as issues de origem para rastreabilidade e não aparece na página.
+O comentário HTML guarda as issues de origem e **é exibido na página** como referência discreta ao lado de cada item — é o número que o cliente usa para acompanhar um chamado.
 
 ## Configuração (uma única vez)
 
