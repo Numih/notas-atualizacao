@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Numih — Notas de atualização</title>
+<meta name="description" content="Novidades, melhorias e correções publicadas em produção no sistema Numih.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --fundo: #fafafa; --texto: #1a1a1a; --suave: #6b6b6b; --borda: #e4e4e4;
+    --novidade-f: #e6f4ea; --novidade-t: #1e6f3e;
+    --melhoria-f: #e8f0fe; --melhoria-t: #1a56b0;
+    --correcao-f: #fdf3e3; --correcao-t: #8a5a00;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fundo: #131313; --texto: #ececec; --suave: #9a9a9a; --borda: #2c2c2c;
+      --novidade-f: #12301c; --novidade-t: #7fce9c;
+      --melhoria-f: #14233d; --melhoria-t: #8ab2f2;
+      --correcao-f: #33270f; --correcao-t: #e2b365;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--fundo); color: var(--texto);
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 44rem; margin: 0 auto; padding: 3rem 1.25rem 5rem; }
+  header h1 { font-size: 1.6rem; margin: 0 0 .25rem; letter-spacing: -.01em; }
+  header p { color: var(--suave); margin: 0 0 2rem; }
+  .filtro { display: block; font-size: .85rem; color: var(--suave); margin-bottom: 2.5rem; }
+  .filtro select {
+    display: block; margin-top: .35rem; padding: .45rem .6rem; font: inherit;
+    color: var(--texto); background: var(--fundo);
+    border: 1px solid var(--borda); border-radius: .4rem; min-width: 14rem;
+  }
+  .nota { border-top: 1px solid var(--borda); padding-top: 1.75rem; margin-top: 1.75rem; }
+  .nota:first-of-type { border-top: 0; padding-top: 0; margin-top: 0; }
+  .nota h2 { font-size: 1.15rem; margin: 0 0 1rem; }
+  .nota h3 { font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--suave); margin: 1.4rem 0 .5rem; }
+  .nota ul { list-style: none; margin: 0; padding: 0; }
+  .nota li { padding: .3rem 0; }
+  .selo {
+    display: inline-block; font-size: .7rem; font-weight: 600; letter-spacing: .03em;
+    padding: .1rem .5rem; border-radius: 99px; margin-right: .5rem; vertical-align: .08em;
+  }
+  .selo.novidade { background: var(--novidade-f); color: var(--novidade-t); }
+  .selo.melhoria { background: var(--melhoria-f); color: var(--melhoria-t); }
+  .selo.correcao { background: var(--correcao-f); color: var(--correcao-t); }
+  .vazio { color: var(--suave); }
+  footer { margin-top: 4rem; font-size: .8rem; color: var(--suave); }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Notas de atualização</h1>
+    <p>Novidades, melhorias e correções publicadas em produção no sistema Numih.</p>
+  </header>
+  
+  <p class="vazio">As primeiras notas serão publicadas em breve.</p>
+  <footer>© Numih. Atualizado automaticamente a cada publicação em produção.</footer>
+</main>
+<script>
+  const seletor = document.getElementById("filtro-modulo");
+  if (seletor) {
+    seletor.addEventListener("change", () => {
+      const escolhido = seletor.value;
+      document.querySelectorAll("section[data-modulo]").forEach((secao) => {
+        secao.hidden = escolhido !== "" && secao.dataset.modulo !== escolhido;
+      });
+      document.querySelectorAll("article.nota").forEach((nota) => {
+        nota.hidden = ![...nota.querySelectorAll("section[data-modulo]")].some((s) => !s.hidden);
+      });
+    });
+  }
+</script>
+</body>
+</html>

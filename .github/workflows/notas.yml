@@ -1,0 +1,69 @@
+# Pipeline das notas de atualização.
+#
+# Três gatilhos:
+#   - cron: sexta-feira 12:00 UTC (09:00 em Brasília), após o deploy de quinta à noite;
+#   - workflow_dispatch: execução manual (deploy fora de hora ou backfill inicial);
+#   - push em notas/**, scripts/** ou modulos.json: reconstrução da página após
+#     edição manual de uma nota (a "escotilha de correção") — não gera conteúdo novo.
+#
+# Commits feitos com o GITHUB_TOKEN não redisparam workflows, então não há laço.
+name: Notas de atualização
+
+on:
+  schedule:
+    - cron: "0 12 * * 5"
+  workflow_dispatch:
+    inputs:
+      backfill:
+        description: "Agrupar o período acumulado em notas mensais (usar apenas na primeira carga)"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths:
+      - "notas/**"
+      - "scripts/**"
+      - "modulos.json"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: notas
+  cancel-in-progress: false
+
+env:
+  # Modelo usado via OpenRouter — troque aqui para experimentar outro.
+  OPENROUTER_MODEL: anthropic/claude-sonnet-4.5
+
+jobs:
+  notas:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Gerar notas da semana
+        if: github.event_name != 'push'
+        env:
+          LINEAR_API_KEY: ${{ secrets.LINEAR_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: node scripts/gerar.mjs ${{ inputs.backfill && '--backfill' || '' }}
+
+      - name: Construir a página
+        run: node scripts/construir.mjs
+
+      - name: Publicar
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nada a publicar."
+          else
+            git commit -m "chore(notas): publicação automática de $(date -u +%Y-%m-%d)"
+            git push
+          fi
