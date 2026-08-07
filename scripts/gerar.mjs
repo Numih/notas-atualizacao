@@ -266,9 +266,14 @@ if (issues.length > 0) {
     for (const mes of [...porMes.keys()].sort()) {
       console.log(`Redigindo ${mes} (${porMes.get(mes).length} issues)…`);
       const itens = await redigirItens(porMes.get(mes));
-      const [ano, m] = mes.split("-").map(Number);
-      const ultimoDia = new Date(Date.UTC(ano, m, 0)).getUTCDate();
-      escreverNota(`${mes}.md`, `${mes}-${String(ultimoDia).padStart(2, "0")}`, tituloMes(mes), itens);
+      // Data = último dia efetivamente coberto, não o último dia do calendário:
+      // datar o mês corrente em 31 o colocaria acima de notas semanais mais recentes.
+      const ultimaCoberta = porMes
+        .get(mes)
+        .map((i) => dataLocal(i.concluidaEm))
+        .sort()
+        .at(-1);
+      escreverNota(`${mes}.md`, ultimaCoberta, tituloMes(mes), itens);
     }
   } else {
     console.log("Redigindo a nota da semana…");
