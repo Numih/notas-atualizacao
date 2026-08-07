@@ -82,21 +82,20 @@
         <section data-modulo="Checklist">
           <h3>Checklist</h3>
           <ul>
-            <li><span class="selo melhoria">Melhoria</span> O cadastro de formulários passou a contar com uma melhor organização relacional para a validação de acesso com locais e agendas. <span class="refs">NUM-1023, NUM-1017</span></li>
-            <li><span class="selo melhoria">Melhoria</span> Os preenchimentos de formulários passaram a registrar o local, a agenda e a origem de disparo para uso em relatórios e análises. <span class="refs">NUM-1009, NUM-1008</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Os preenchimentos de formulários passaram a registrar o local, a agenda e a origem do disparo, que já podem ser usados como filtro nos painéis de análise. <span class="refs">NUM-1009, NUM-1008</span></li>
           </ul>
         </section>
         <section data-modulo="Integrações">
           <h3>Integrações</h3>
           <ul>
-            <li><span class="selo novidade">Novidade</span> Agora é possível realizar o vínculo de dispositivos utilizando um par de chaves assimétrico e um código de pareamento. <span class="refs">NUM-1024</span></li>
-            <li><span class="selo melhoria">Melhoria</span> O módulo de dispositivos passou a ficar acessível para a gestão dos clientes, contando com permissões padronizadas e recursos de edição. <span class="refs">NUM-1050</span></li>
+            <li><span class="selo novidade">Novidade</span> Agora um aparelho é vinculado informando no sistema o código que ele mesmo mostra, sem configuração prévia. <span class="refs">NUM-1024</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A tela de Dispositivos passou a mostrar os aparelhos da sua organização, permitindo renomear cada um e vincular novos sem sair da listagem. <span class="refs">NUM-1050</span></li>
           </ul>
         </section>
         <section data-modulo="Plataforma">
           <h3>Plataforma</h3>
           <ul>
-            <li><span class="selo novidade">Novidade</span> Agora é possível gerenciar as inscrições de notificações push e configurar as preferências diretamente pelo menu de notificações. <span class="refs">NUM-871</span></li>
+            <li><span class="selo novidade">Novidade</span> O sino de notificações passou a ter um painel próprio, onde é possível ligar ou desligar os avisos em cada aparelho e escolher quais deseja receber. <span class="refs">NUM-871</span></li>
           </ul>
         </section>
       </article>
@@ -107,19 +106,19 @@
         <section data-modulo="CRM">
           <h3>CRM</h3>
           <ul>
-            <li><span class="selo novidade">Novidade</span> Agora a caixa de entrada de conversas está escopada por usuário e o gestor conta com uma visão global de todas as interações. <span class="refs">NUM-879</span></li>
+            <li><span class="selo novidade">Novidade</span> Cada atendente passou a ver apenas as próprias conversas, e o gestor conta com um painel com todos os atendimentos. <span class="refs">NUM-879</span></li>
           </ul>
         </section>
         <section data-modulo="Hospitalar">
           <h3>Hospitalar</h3>
           <ul>
-            <li><span class="selo novidade">Novidade</span> Adicionada a funcionalidade de habilitação de medicamentos e inclusão no payload de autorização para automações. <span class="refs">NUM-742</span></li>
+            <li><span class="selo novidade">Novidade</span> Agora é possível habilitar medicamentos no catálogo e incluí-los nas guias, seguindo automaticamente para os pedidos de autorização. <span class="refs">NUM-742</span></li>
           </ul>
         </section>
         <section data-modulo="Notificações">
           <h3>Notificações</h3>
           <ul>
-            <li><span class="selo novidade">Novidade</span> Agora o sistema envia notificações por push no navegador, inclusive em dispositivos móveis. <span class="refs">NUM-870, NUM-872</span></li>
+            <li><span class="selo novidade">Novidade</span> Agora o sistema envia notificações no navegador e no celular, mesmo com o sistema fechado. <span class="refs">NUM-870, NUM-872</span></li>
           </ul>
         </section>
       </article>
@@ -130,36 +129,35 @@
         <section data-modulo="Checklist">
           <h3>Checklist</h3>
           <ul>
-            <li><span class="selo novidade">Novidade</span> Implementada a leitura offline de fluxos de campo e o upload offline de fotos e anexos. <span class="refs">NUM-747</span></li>
-            <li><span class="selo correcao">Correção</span> Corrigido o erro ao editar formulários com acesso público ativado. <span class="refs">NUM-796</span></li>
-            <li><span class="selo correcao">Correção</span> Corrigida a paginação e a contagem total de respostas no Dashboard Ao Vivo. <span class="refs">NUM-669</span></li>
-            <li><span class="selo correcao">Correção</span> Corrigida a exibição do texto das opções em gráficos analíticos de campos de caixa de seleção. <span class="refs">NUM-645</span></li>
-            <li><span class="selo correcao">Correção</span> Padronizada a tradução do termo anônimo na listagem de respostas de formulários. <span class="refs">NUM-457</span></li>
+            <li><span class="selo novidade">Novidade</span> Os formulários de campo passaram a funcionar sem internet: o preenchimento e as fotos ficam guardados no aparelho e são enviados quando a conexão voltar. <span class="refs">NUM-747, NUM-746, NUM-745, NUM-744</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o erro ao editar formulários com o acesso público ativado. <span class="refs">NUM-796</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida a navegação entre páginas e a contagem total de respostas no painel ao vivo. <span class="refs">NUM-669</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida a exibição do texto das opções nos gráficos de campos de múltipla escolha. <span class="refs">NUM-645</span></li>
+            <li><span class="selo correcao">Correção</span> Padronizado o termo usado para respostas anônimas na listagem de formulários. <span class="refs">NUM-457</span></li>
           </ul>
         </section>
         <section data-modulo="Hospitalar">
           <h3>Hospitalar</h3>
           <ul>
-            <li><span class="selo novidade">Novidade</span> Renomeada a nomenclatura de operadoras para convênios e adicionados novos tipos de convênio ao cadastro. <span class="refs">NUM-689</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O cadastro de operadoras passou a se chamar Convênios, com novos tipos disponíveis. <span class="refs">NUM-689</span></li>
           </ul>
         </section>
         <section data-modulo="PABX">
           <h3>PABX</h3>
           <ul>
-            <li><span class="selo novidade">Novidade</span> Disponibilizada a integração automática de PABX por tenant com o provisionador de infraestrutura. <span class="refs">NUM-762, NUM-758, NUM-759</span></li>
+            <li><span class="selo novidade">Novidade</span> A central telefônica de cada organização passou a ser preparada automaticamente, sem configuração manual. <span class="refs">NUM-762, NUM-758, NUM-759</span></li>
           </ul>
         </section>
         <section data-modulo="Tarefas">
           <h3>Tarefas</h3>
           <ul>
-            <li><span class="selo novidade">Novidade</span> Adicionado o controle de timeout, varredura periódica e notificação para pendências de integração externas. <span class="refs">NUM-740</span></li>
+            <li><span class="selo melhoria">Melhoria</span> As etapas que dependem de sistemas externos passaram a ter prazo próprio e a avisar quando não são concluídas. <span class="refs">NUM-740</span></li>
           </ul>
         </section>
         <section data-modulo="Plataforma">
           <h3>Plataforma</h3>
           <ul>
-            <li><span class="selo melhoria">Melhoria</span> Adicionada a persistência de cache local e a fila de envio offline para operações em campo. <span class="refs">NUM-746, NUM-745, NUM-744</span></li>
-            <li><span class="selo correcao">Correção</span> Corrigido o vínculo de acesso por departamento em convites após o primeiro login do usuário. <span class="refs">NUM-752</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o acesso por departamento nos convites, que não era aplicado após o primeiro acesso do usuário. <span class="refs">NUM-752</span></li>
           </ul>
         </section>
       </article>
