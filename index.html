@@ -65,8 +65,11 @@
     <label class="filtro">Filtrar por módulo
       <select id="filtro-modulo">
         <option value="">Todos os módulos</option>
+        <option value="Apoio">Apoio</option>
+        <option value="Avaliações">Avaliações</option>
         <option value="Checklist">Checklist</option>
         <option value="CRM">CRM</option>
+        <option value="Financeiro">Financeiro</option>
         <option value="Hospitalar">Hospitalar</option>
         <option value="Integrações">Integrações</option>
         <option value="Notificações">Notificações</option>
@@ -76,6 +79,45 @@
       </select>
     </label>
   
+      <article class="nota">
+        <h2>14 de agosto de 2026</h2>
+        
+        <section data-modulo="Apoio">
+          <h3>Apoio</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> Os filtros do DataGrid no módulo de Apoio foram atualizados para o novo padrão de chips. <span class="refs">NUM-815</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Avaliações">
+          <h3>Avaliações</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> Os filtros do DataGrid no módulo de Avaliações foram atualizados para o novo padrão de chips. <span class="refs">NUM-818</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o link das notificações de avaliações para que direcionem diretamente para o processo correto na central, evitando erro de página não encontrada. <span class="refs">NUM-1100</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Checklist">
+          <h3>Checklist</h3>
+          <ul>
+            <li><span class="selo correcao">Correção</span> Corrigido um erro na busca textual da listagem de formulários do checklist que impedia a filtragem por título. <span class="refs">NUM-1095</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Financeiro">
+          <h3>Financeiro</h3>
+          <ul>
+            <li><span class="selo correcao">Correção</span> Ajustado o espaçamento dos cards de impostos retidos e destacados no cadastro de títulos a pagar para aproveitar melhor a área da tela. <span class="refs">NUM-717</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Hospitalar">
+          <h3>Hospitalar</h3>
+          <ul>
+            <li><span class="selo correcao">Correção</span> Corrigido o erro que apagava o arquivo de orçamento de OPME quando uma guia era devolvida para ajuste. <span class="refs">NUM-1245</span></li>
+            <li><span class="selo correcao">Correção</span> O campo &quot;N° Carteirinha&quot; no cadastro de guias passou a validar o limite máximo de 20 caracteres conforme o padrão TISS. <span class="refs">NUM-1228</span></li>
+            <li><span class="selo correcao">Correção</span> A listagem de convênios no cadastro de hospitais passou a ocultar os convênios que já foram vinculados anteriormente, evitando duplicidade. <span class="refs">NUM-1227</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido um alerta incorreto que impedia o cadastro da carteirinha ao utilizar convênios já habilitados e ativos no sistema. <span class="refs">NUM-1226</span></li>
+          </ul>
+        </section>
+      </article>
+
       <article class="nota">
         <h2>7 de agosto de 2026</h2>
         
