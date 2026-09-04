@@ -67,8 +67,10 @@
         <option value="">Todos os módulos</option>
         <option value="Agentes de IA">Agentes de IA</option>
         <option value="Apoio">Apoio</option>
+        <option value="Assistente de IA">Assistente de IA</option>
         <option value="Avaliações">Avaliações</option>
         <option value="Checklist">Checklist</option>
+        <option value="Contratos">Contratos</option>
         <option value="CRM">CRM</option>
         <option value="Financeiro">Financeiro</option>
         <option value="Hospitalar">Hospitalar</option>
@@ -76,11 +78,130 @@
         <option value="Notificações">Notificações</option>
         <option value="PABX">PABX</option>
         <option value="Protocolos">Protocolos</option>
+        <option value="Suprimentos">Suprimentos</option>
         <option value="Tarefas">Tarefas</option>
         <option value="Plataforma">Plataforma</option>
       </select>
     </label>
   
+      <article class="nota">
+        <h2>4 de setembro de 2026</h2>
+        
+        <section data-modulo="Agentes de IA">
+          <h3>Agentes de IA</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Implementado o motor de execução e processamento de agentes de IA para atendimento e operações automatizadas. <span class="refs">NUM-931</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Apoio">
+          <h3>Apoio</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Adicionada a possibilidade de gerenciar e editar documentos e arquivos de pessoas de forma individual. <span class="refs">NUM-642</span></li>
+            <li><span class="selo correcao">Correção</span> O cadastro de pessoas passou a tratar e remover automaticamente espaços em branco indevidos e duplicados no campo Nome. <span class="refs">NUM-1342</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigidos erros de acentuação em nomes de itens na matriz de acessos dos módulos de Conta Corrente e Sistema. <span class="refs">NUM-734</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Assistente de IA">
+          <h3>Assistente de IA</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> O assistente de IA passou a processar as consultas de forma mais direta e ágil, removendo avisos repetitivos e desnecessários das respostas. <span class="refs">NUM-1361</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Checklist">
+          <h3>Checklist</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Adicionado suporte completo a instrumentos psicossociais com dimensões, faixas de risco e segmentações. <span class="refs">NUM-1096</span></li>
+            <li><span class="selo novidade">Novidade</span> Adicionada a aba Histórico com registros de auditoria nos drawers de resumo de agendas e localizações. <span class="refs">NUM-1042</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Criada uma análise individual dedicada para cada questionário aplicado, separando os resultados dos checklists avulsos. <span class="refs">NUM-1091</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A tela de detalhes ao vivo de questionários foi reorganizada para exibir métricas e participantes em formato de tabela padronizada, eliminando cards desproporcionais. <span class="refs">NUM-1090</span></li>
+            <li><span class="selo correcao">Correção</span> O modo ao vivo de questionários foi ajustado para atualizar apenas os dados em segundo plano, preservando a posição da página e o scroll. <span class="refs">NUM-1089</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o comportamento de campos de escolha única na mesma página para que funcionem de forma independente sem sobrescrever seleções anteriores. <span class="refs">NUM-1088</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Contratos">
+          <h3>Contratos</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Adicionada a aba Histórico com registros de auditoria nos drawers de resumo de contratos. <span class="refs">NUM-1035</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Validados e aprimorados os filtros por chips no DataGrid para todas as listagens do módulo de contratos. <span class="refs">NUM-817</span></li>
+            <li><span class="selo correcao">Correção</span> Validada a correta vinculação do índice de correção ao cadastrar tipos de modelo com caução. <span class="refs">NUM-1217</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o cálculo do saldo acumulado no fluxo de caixa do contrato para evitar a contagem duplicada de faturamentos. <span class="refs">NUM-1028</span></li>
+          </ul>
+        </section>
+        <section data-modulo="CRM">
+          <h3>CRM</h3>
+          <ul>
+            <li><span class="selo correcao">Correção</span> O campo de resposta no atendimento por chat agora mantém o foco automaticamente após o envio de uma mensagem, permitindo digitar a seguinte sem cliques extras. <span class="refs">NUM-1335</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigidos erros na suíte de testes operacionais do CRM referentes a componentes de formulário e rótulos de movimentação. <span class="refs">NUM-916</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Financeiro">
+          <h3>Financeiro</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> Padronizados os nomes das operações de dimensões do conta-corrente para o padrão em português. <span class="refs">NUM-593</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida falha que impedia a criação de empresas em novos ambientes devido à ausência de estruturas de hierarquia. <span class="refs">NUM-1336</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Hospitalar">
+          <h3>Hospitalar</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Adicionado o documento de resumo da guia exportável em PDF com a identidade visual da Numih, substituindo o antigo relatório de dossiê. <span class="refs">NUM-1327</span></li>
+            <li><span class="selo novidade">Novidade</span> O registro da solicitação manual agora pode ser feito sem o protocolo ou o PDF da guia, deixando o registro pendente com um selo em destaque até que ambos sejam preenchidos antes de sair da avaliação do plano. <span class="refs">NUM-1287</span></li>
+            <li><span class="selo novidade">Novidade</span> Implementada a geração e envio de três anexos distintos por etapa no registro externo das guias. <span class="refs">NUM-1259, NUM-1269</span></li>
+            <li><span class="selo novidade">Novidade</span> Adicionadas as fases de orçamento concluído e aguardando solicitação no ciclo de atendimento das guias no Tasy. <span class="refs">NUM-1064</span></li>
+            <li><span class="selo novidade">Novidade</span> Disponibilizada a integração bidirecional entre o módulo hospitalar e o sistema Tasy. <span class="refs">NUM-940</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O sistema de sincronização externa passou a publicar atualizações da guia apenas quando ocorrem alterações relevantes, evitando registros duplicados no sistema do hospital. <span class="refs">NUM-1298</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A aba de divergências passou a exibir alertas detalhados quando o dossiê da guia é recusado por exceder o limite de tamanho permitido. <span class="refs">NUM-1270</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A movimentação de guias devolvidas ao médico passou a atualizar corretamente o estágio no sistema do hospital, evitando divergências no fluxo. <span class="refs">NUM-1134</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o problema que comprimia e cortava o conteúdo dos cards ao filtrar o quadro de acompanhamento por raias. <span class="refs">NUM-1347</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida a divergência entre o arraste no quadro e o botão de solicitação manual, garantindo que o registro exija os dados obrigatórios e marque corretamente a origem. <span class="refs">NUM-1331</span></li>
+            <li><span class="selo correcao">Correção</span> O modal de solicitação manual foi ajustado para respeitar os limites da tela com rolagem interna, evitando que os botões fiquem sobrepostos ao arquivo carregado. <span class="refs">NUM-1329</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida a falha que impedia o carregamento do preview visual de documentos na etapa de dados do procedimento. <span class="refs">NUM-1291</span></li>
+            <li><span class="selo correcao">Correção</span> O quadro de acompanhamento de guias em telas menores foi ajustado para remover barras de rolagem internas desnecessárias, adaptando-se melhor ao tamanho da página. <span class="refs">NUM-1289</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida falha que apagava os materiais de guias justificadas ao tentar editá-los antes do reenvio. <span class="refs">NUM-1133</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Integrações">
+          <h3>Integrações</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Adicionada a primitiva de download de arquivos pelo agente local, permitindo que os adaptadores recebam documentos com segurança. <span class="refs">NUM-1258, NUM-1264</span></li>
+          </ul>
+        </section>
+        <section data-modulo="PABX">
+          <h3>PABX</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Adicionada consulta rápida de disponibilidade para verificar o status do ramal ativo do usuário no sistema. <span class="refs">NUM-951</span></li>
+            <li><span class="selo correcao">Correção</span> O agente de IA foi impedido de ser associado como membro de filas de atendimento, evitando loops de autoatendimento em transferências. <span class="refs">NUM-1153</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida falha no fallback de troncos e encaminhamentos que impedia o direcionamento correto de chamadas para ramais de agentes. <span class="refs">NUM-1152</span></li>
+            <li><span class="selo correcao">Correção</span> O painel do softphone no cabeçalho passou a exibir corretamente o status e as opções de pausa do agente para os ramais vinculados. <span class="refs">NUM-1149</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Suprimentos">
+          <h3>Suprimentos</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Adicionada a aba Histórico com registros de auditoria nos drawers de resumo de solicitações e ordens de compra. <span class="refs">NUM-1039</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Tarefas">
+          <h3>Tarefas</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Adicionada a aba Histórico com registros de auditoria no drawer de detalhes de POP. <span class="refs">NUM-1046</span></li>
+            <li><span class="selo correcao">Correção</span> A tela de preenchimento de etapas do POP não exibe mais incorretamente a mensagem de etapa já preenchida em fluxos ativos. <span class="refs">NUM-1082</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Plataforma">
+          <h3>Plataforma</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> Aprimorada a estrutura dos componentes de tabela, formulários e listas para facilitar testes e garantir maior consistência nas telas. <span class="refs">NUM-1304</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A coluna de layout em formulários passou a permitir o uso de espaços em branco vazios sem exigir conteúdos fictícios. <span class="refs">NUM-1182</span></li>
+            <li><span class="selo correcao">Correção</span> O botão de alternância &quot;Ativo&quot; na listagem de materiais agora permanece devidamente alinhado mesmo após realizar buscas ou reordenar a tabela. <span class="refs">NUM-1292</span></li>
+            <li><span class="selo correcao">Correção</span> O campo de código de verificação em dispositivos móveis agora abre o teclado correto dependendo se o código usa números ou letras. <span class="refs">NUM-1243</span></li>
+            <li><span class="selo correcao">Correção</span> O painel de login agora lida corretamente com fluxos de autenticação em dois fatores e tarefas pendentes de conta. <span class="refs">NUM-985, NUM-989</span></li>
+            <li><span class="selo correcao">Correção</span> O menu de notificações foi ajustado para utilizar os tokens corretos do design system, garantindo a legibilidade do texto no tema escuro. <span class="refs">NUM-876</span></li>
+            <li><span class="selo correcao">Correção</span> O modal de confirmação de alterações não salvas foi ajustado para manter o foco e permitir a interação correta com seus botões ao pressionar a tecla Esc. <span class="refs">NUM-695</span></li>
+          </ul>
+        </section>
+      </article>
+
       <article class="nota">
         <h2>28 de agosto de 2026</h2>
         
