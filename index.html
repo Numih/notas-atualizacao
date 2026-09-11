@@ -85,6 +85,172 @@
     </label>
   
       <article class="nota">
+        <h2>11 de setembro de 2026</h2>
+        
+        <section data-modulo="Apoio">
+          <h3>Apoio</h3>
+          <ul>
+            <li><span class="selo correcao">Correção</span> O cadastro de pessoas usando busca por CEP passou a validar e salvar o número do endereço corretamente, sem travar o avanço. <span class="refs">NUM-794</span></li>
+            <li><span class="selo correcao">Correção</span> O cadastro de novas marcas durante a inclusão de materiais passou a funcionar corretamente ao clicar no botão de adicionar. <span class="refs">NUM-715</span></li>
+            <li><span class="selo correcao">Correção</span> Ajustado o espaçamento visual no formulário de edição de identificação de grupos de pessoas. <span class="refs">NUM-649</span></li>
+            <li><span class="selo correcao">Correção</span> O campo de seleção de grupo no cadastro de centros de custo passou a habilitar o botão de avanço corretamente após a escolha. <span class="refs">NUM-514</span></li>
+            <li><span class="selo correcao">Correção</span> O drawer de cadastro de pessoas passou a fechar automaticamente após o salvamento bem-sucedido. <span class="refs">NUM-71</span></li>
+            <li><span class="selo correcao">Correção</span> O campo de grupo de empresas no cadastro corporativo deixou de exibir erros indevidos em campos opcionais. <span class="refs">NUM-70</span></li>
+            <li><span class="selo correcao">Correção</span> Removidos os indicadores de obrigatoriedade dos campos de endereço no cadastro de pessoas, refletindo a regra atual. <span class="refs">NUM-41</span></li>
+            <li><span class="selo correcao">Correção</span> Padronizados os ícones do painel do apoio para ficarem idênticos aos exibidos no menu lateral. <span class="refs">NUM-38</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o carregamento de formulários dinâmicos ao alternar o estado civil no cadastro de pessoas. <span class="refs">NUM-26</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Assistente de IA">
+          <h3>Assistente de IA</h3>
+          <ul>
+            <li><span class="selo correcao">Correção</span> O assistente de IA passou a validar a autenticação das requisições de forma segura, deixando de confiar em identificações enviadas sem verificação. <span class="refs">NUM-1018</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Avaliações">
+          <h3>Avaliações</h3>
+          <ul>
+            <li><span class="selo correcao">Correção</span> Corrigido erro de transação que ocorria no início de processos de avaliação vinculados a fluxos automáticos. <span class="refs">NUM-600</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Checklist">
+          <h3>Checklist</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> O preenchimento de checklists em campo passou a contar com suporte a funcionamento offline, salvando as respostas e fotos localmente quando a conexão cai. <span class="refs">NUM-743</span></li>
+            <li><span class="selo novidade">Novidade</span> Adicionada opção de configuração em formulários para ocultar o resumo das respostas preenchidas na tela final de conclusão. <span class="refs">NUM-344</span></li>
+            <li><span class="selo correcao">Correção</span> Checklists inativos passaram a bloquear corretamente o envio de novas respostas. <span class="refs">NUM-975</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o preenchimento de endereços por busca automática, que exibia erros indevidos e limpava o campo de município ao alterar o complemento. <span class="refs">NUM-639</span></li>
+            <li><span class="selo correcao">Correção</span> As respostas dos componentes de requisito legal e verificação de conformidade passaram a exibir o conteúdo preenchido corretamente na tela de resumo, sem códigos internos. <span class="refs">NUM-638</span></li>
+            <li><span class="selo correcao">Correção</span> Links públicos inativos desativados no Checklist agora permanecem visíveis na tabela com o switch em estado desligado. <span class="refs">NUM-535</span></li>
+            <li><span class="selo correcao">Correção</span> Respostas extensas em campos de texto curto e longo nos formulários passaram a ser exibidas integralmente sem truncamento por reticências. <span class="refs">NUM-458</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o layout de seleção de campos em formulários para dispositivos móveis, evitando que o conteúdo ultrapasse as bordas dos cards. <span class="refs">NUM-339</span></li>
+            <li><span class="selo correcao">Correção</span> A coluna de status ativo em formulários e agendas foi padronizada para utilizar um switch interativo, permitindo alterar o estado diretamente na listagem. <span class="refs">NUM-282</span></li>
+            <li><span class="selo correcao">Correção</span> O componente de caixa de seleção em formulários passou a exibir o texto legível da opção escolhida na tela de resumo, em vez do código interno. <span class="refs">NUM-201</span></li>
+            <li><span class="selo correcao">Correção</span> O componente de controle deslizante (slider) em formulários teve seu alinhamento corrigido em todos os pontos da escala. <span class="refs">NUM-198</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido erro que exibia mensagem de formato inválido ao anexar arquivos em formulários, mesmo com o carregamento bem-sucedido. <span class="refs">NUM-194</span></li>
+            <li><span class="selo correcao">Correção</span> Valores numéricos longos preenchidos em formulários agora respeitam os limites do card na tela de resumo, evitando quebras de layout. <span class="refs">NUM-193</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Contratos">
+          <h3>Contratos</h3>
+          <ul>
+            <li><span class="selo correcao">Correção</span> Corrigido o cálculo de saldo de contratos em medições, que exibia valores incorretos. <span class="refs">NUM-1286</span></li>
+            <li><span class="selo correcao">Correção</span> A criação de liberação de caução passou a retornar corretamente o número do contrato na resposta imediata. <span class="refs">NUM-1285</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida validação que bloqueava o envio de anexos em aditivos de contratos com objeto herdado. <span class="refs">NUM-1277</span></li>
+            <li><span class="selo correcao">Correção</span> Os dados de identificação da parte vinculada ao aditivo passaram a ser exibidos corretamente sem exigir consultas adicionais. <span class="refs">NUM-1254</span></li>
+            <li><span class="selo correcao">Correção</span> O sistema agora impede que anexos sejam vinculados a aditivos quando ocorre falha no upload do arquivo. <span class="refs">NUM-1252</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida a consulta de contratos aninhados no faturamento direto, que exibia valores e saldos zerados. <span class="refs">NUM-1249</span></li>
+            <li><span class="selo correcao">Correção</span> O envio de faturamentos para avaliação passou a exigir o preenchimento prévio dos dados da nota fiscal. <span class="refs">NUM-1247</span></li>
+            <li><span class="selo correcao">Correção</span> O sistema passou a impedir a criação de medições em contratos que ainda estão em digitação e não foram aprovados. <span class="refs">NUM-1246</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida a exibição da descrição de insumos no faturamento direto, que aparecia em branco. <span class="refs">NUM-1242</span></li>
+            <li><span class="selo correcao">Correção</span> O valor total do contrato passou a ser exibido corretamente logo após a criação de um faturamento direto. <span class="refs">NUM-1240</span></li>
+            <li><span class="selo correcao">Correção</span> O saldo do contrato no faturamento direto passou a refletir corretamente o valor disponível e a ser recalculado após lançamentos. <span class="refs">NUM-1239</span></li>
+            <li><span class="selo correcao">Correção</span> A atualização de medições passou a respeitar rigorosamente o fluxo de status e as regras de transição. <span class="refs">NUM-1236</span></li>
+            <li><span class="selo correcao">Correção</span> O sistema passou a validar obrigatoriamente a presença de toda a documentação exigida pelo contrato antes de finalizar ou aprovar uma medição. <span class="refs">NUM-1229</span></li>
+            <li><span class="selo correcao">Correção</span> Os dados informados para os assinantes no cadastro de contratos passaram a ser salvos corretamente, sem serem substituídos por valores genéricos. <span class="refs">NUM-1225</span></li>
+            <li><span class="selo correcao">Correção</span> O cadastro de novos registros no catálogo de documentações passou a retornar imediatamente as datas de auditoria na resposta. <span class="refs">NUM-1223</span></li>
+            <li><span class="selo correcao">Correção</span> O campo com o nome do modelo de contrato deixou de ser apagado ao selecionar o tipo no formulário de cadastro. <span class="refs">NUM-103</span></li>
+          </ul>
+        </section>
+        <section data-modulo="CRM">
+          <h3>CRM</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Adicionada a configuração de canais de telefonia para o direcionamento de chamadas e interações no CRM. <span class="refs">NUM-673</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido erro que fazia a reconciliação automática de roteamento desfazer a atribuição manual de atendimentos feita por gestores. <span class="refs">NUM-918</span></li>
+            <li><span class="selo correcao">Correção</span> A geração de resumos de atendimento por inteligência artificial passou a aplicar corretamente o modelo padrão configurado. <span class="refs">NUM-912</span></li>
+            <li><span class="selo correcao">Correção</span> Gestores e administradores agora conseguem assumir atendimentos diretamente e visualizar a lista completa de atendentes ativos. <span class="refs">NUM-911</span></li>
+            <li><span class="selo correcao">Correção</span> Operações no CRM que falham no sistema passaram a exibir mensagens de erro adequadas em vez de falsos avisos de sucesso. <span class="refs">NUM-910</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido erro de processamento que impedia a entrada de mensagens recebidas via WhatsApp no CRM. <span class="refs">NUM-682</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o erro de gravação de webhooks do WhatsApp em homologação, restabelecendo o recebimento de mensagens. <span class="refs">NUM-680</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Financeiro">
+          <h3>Financeiro</h3>
+          <ul>
+            <li><span class="selo correcao">Correção</span> O drawer do simulador de conversão de moedas teve seu layout corrigido, eliminando espaços em branco e mantendo os botões fixos no rodapé. <span class="refs">NUM-528</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Hospitalar">
+          <h3>Hospitalar</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> O módulo de medicamentos hospitalares agora conta com a opção &quot;Adicionar do Apoio&quot; para habilitar cadastros pré-existentes. <span class="refs">NUM-1293</span></li>
+            <li><span class="selo novidade">Novidade</span> A listagem de planos de saúde habilitados e no catálogo ANS agora permite abrir um painel de detalhes ao clicar em um item. <span class="refs">NUM-809</span></li>
+            <li><span class="selo novidade">Novidade</span> A edição de guias devolvidas para ajuste passou a ser realizada pelo médico solicitante, ocultando os dados internos da etapa hospitalar. <span class="refs">NUM-781</span></li>
+            <li><span class="selo novidade">Novidade</span> O seletor de agrupamento de guias (&quot;Raias por&quot;) passou a contar com a opção &quot;Médico&quot; em substituição a &quot;Plano&quot;. <span class="refs">NUM-756</span></li>
+            <li><span class="selo novidade">Novidade</span> A reprovação de guias no acompanhamento passou a exigir uma justificativa por texto, exibindo o motivo registrado na visão geral durante o re-trabalho. <span class="refs">NUM-684</span></li>
+            <li><span class="selo novidade">Novidade</span> O número de protocolo obtido junto à operadora passou a ser exibido na aba de acompanhamento do drawer da guia. <span class="refs">NUM-658</span></li>
+            <li><span class="selo novidade">Novidade</span> A aba de materiais em guias oriundas de OPME passou a exibir os itens agrupados por código da operadora de forma simplificada. <span class="refs">NUM-657</span></li>
+            <li><span class="selo novidade">Novidade</span> O anexo de orçamento de OPME passou a ser exibido na aba de documentos do drawer da guia. <span class="refs">NUM-656</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A etapa de procedimentos no preenchimento de guias hospitalares passou a exibir a tabela de procedimentos como primeiro elemento. <span class="refs">NUM-1294</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A aba de convênios habilitados passou a exibir também os registros inativos de forma esmaecida, facilitando a gestão e permitindo o gerenciamento de convênios diretos. <span class="refs">NUM-775</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A desativação de materiais no módulo hospitalar passou a liberar o vínculo com o cadastro central, permitindo a exclusão de itens que nunca foram utilizados. <span class="refs">NUM-754</span></li>
+            <li><span class="selo correcao">Correção</span> A busca de planos de saúde passou a considerar também o nome da operadora vinculada. <span class="refs">NUM-812</span></li>
+            <li><span class="selo correcao">Correção</span> O catálogo ANS de planos de saúde deixou de exibir planos com situação cancelada para habilitação. <span class="refs">NUM-808</span></li>
+            <li><span class="selo correcao">Correção</span> Os dados de acomodação e pacotes preenchidos nas pendências da guia agora continuam visíveis na aba de acompanhamento após o envio para avaliação. <span class="refs">NUM-776</span></li>
+            <li><span class="selo correcao">Correção</span> Guias com falha de automação (tratativa manual) passaram a exibir o botão correto para reenviar a solicitação. <span class="refs">NUM-755</span></li>
+            <li><span class="selo correcao">Correção</span> As colunas de quantidade e código TUSS nas tabelas de materiais da aba de acompanhamento foram devidamente alinhadas. <span class="refs">NUM-753</span></li>
+            <li><span class="selo correcao">Correção</span> O card do orçamento de OPME na aba correspondente do drawer passou a ser clicável em toda a sua extensão para facilitar a edição. <span class="refs">NUM-716</span></li>
+            <li><span class="selo correcao">Correção</span> A aba de materiais em guias de OPME em digitação passou a exibir corretamente o agrupamento por código da operadora. <span class="refs">NUM-686</span></li>
+            <li><span class="selo correcao">Correção</span> A etapa de operadora e plano ao continuar o cadastro de uma guia reprovada passou a carregar com os dados devidamente validados. <span class="refs">NUM-685</span></li>
+            <li><span class="selo correcao">Correção</span> O fluxo de cadastro de guias pendentes passou a exibir corretamente a etapa intermediária de cadastro de procedimentos. <span class="refs">NUM-683</span></li>
+            <li><span class="selo correcao">Correção</span> A listagem de kits hospitalares passou a permitir a exclusão de registros e o acesso ao editor para alterar, adicionar ou remover itens. <span class="refs">NUM-679</span></li>
+            <li><span class="selo correcao">Correção</span> O salvamento de anexos de orçamento de OPME passou a persistir corretamente o arquivo enviado, sem atraso de submissão. <span class="refs">NUM-666</span></li>
+            <li><span class="selo correcao">Correção</span> A aba de orçamento em guias de OPME finalizadas passou a permitir a visualização e o download do arquivo anexado. <span class="refs">NUM-662</span></li>
+            <li><span class="selo correcao">Correção</span> O campo de seleção de materiais habilitados na criação de kits hospitalares voltou a listar os itens cadastrados no catálogo. <span class="refs">NUM-660</span></li>
+            <li><span class="selo correcao">Correção</span> Removida a duplicação de botões de inclusão no drawer de CBOs do médico, padronizando a interface. <span class="refs">NUM-655</span></li>
+            <li><span class="selo correcao">Correção</span> O título do drawer de resumo de operadoras passou a exibir o nome real da instituição em vez de um identificador numérico. <span class="refs">NUM-654</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o cadastro de vínculos entre médicos e operadoras para respeitar corretamente o status inativo quando informado na criação. <span class="refs">NUM-646</span></li>
+            <li><span class="selo correcao">Correção</span> O campo de seleção de operadoras no cadastro de novas guias passou a filtrar apenas as operadoras credenciadas ao médico selecionado. <span class="refs">NUM-643</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Notificações">
+          <h3>Notificações</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Atualizado o sistema de notificações via WhatsApp com integração nativa, melhorias em templates e central de administração. <span class="refs">NUM-697</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Protocolos">
+          <h3>Protocolos</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> O modal de confirmação de entrega em Protocolos passou a ocupar a tela inteira em dispositivos móveis, facilitando o preenchimento e a assinatura. <span class="refs">NUM-858</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o erro inesperado que impedia o carregamento da tela de Tipos de Protocolo. <span class="refs">NUM-1330</span></li>
+            <li><span class="selo correcao">Correção</span> Ajustado o espaçamento entre os campos de descrição, prioridade e prazo limite no formulário de novos protocolos. <span class="refs">NUM-830</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o corte visual na letra acentuada do rótulo &quot;Prazo limite&quot; no formulário de novos protocolos. <span class="refs">NUM-828</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Suprimentos">
+          <h3>Suprimentos</h3>
+          <ul>
+            <li><span class="selo correcao">Correção</span> O botão para avançar etapas no cadastro de solicitações de materiais e serviços voltou a ser habilitado corretamente após o preenchimento do saldo de utilizações. <span class="refs">NUM-751</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o posicionamento do menu de sugestões de pesquisa no mapa de cotação, que aparecia encoberto pela tabela. <span class="refs">NUM-522</span></li>
+            <li><span class="selo correcao">Correção</span> O botão de salvar nas condições de pagamento do mapa de cotação voltou a responder aos cliques após a geração de parcelas. <span class="refs">NUM-509</span></li>
+            <li><span class="selo correcao">Correção</span> A área de parcelas na aba de pagamento do detalhe do fornecedor no mapa de cotação passou a exibir barra de rolagem para visualização completa. <span class="refs">NUM-507</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o comportamento que fechava o drawer ao tentar selecionar um item na lista do mapa de cotação. <span class="refs">NUM-24</span></li>
+            <li><span class="selo correcao">Correção</span> O botão &quot;Editar fornecedores&quot; no mapa de cotação foi ajustado para o estilo em contorno. <span class="refs">NUM-23</span></li>
+            <li><span class="selo correcao">Correção</span> Ajustadas as cores dos botões e o tamanho do campo de busca na janela de distribuição por centro de custo no mapa de cotação. <span class="refs">NUM-22</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido erro ao processar valores decimais em campos de impostos no detalhe de itens do mapa de cotação. <span class="refs">NUM-20</span></li>
+            <li><span class="selo correcao">Correção</span> As mensagens de alteração na tabela do mapa de cotação passaram a ser exibidas de forma mais discreta. <span class="refs">NUM-19</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Tarefas">
+          <h3>Tarefas</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Adicionada a página &quot;Minhas etapas pendentes&quot;, reunindo as demandas ativas do nível do usuário e as etapas livres para execução direta. <span class="refs">NUM-711</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A fila de tarefas pendentes ganhou um botão para executar a próxima etapa em sequência e avisos interativos ao concluir preenchimentos. <span class="refs">NUM-730</span></li>
+            <li><span class="selo melhoria">Melhoria</span> As notificações de ativação de etapas passaram a abrir diretamente a tela de preenchimento ou o módulo de destino ao serem clicadas. <span class="refs">NUM-729</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A tela de etapas pendentes foi reformulada para utilizar a nova fila de trabalho organizada por instâncias e filtros rápidos. <span class="refs">NUM-728</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A página inicial do módulo de Tarefas passou a exibir uma seção com as etapas mais antigas aguardando a sua atenção. <span class="refs">NUM-724</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Plataforma">
+          <h3>Plataforma</h3>
+          <ul>
+            <li><span class="selo correcao">Correção</span> Os resultados da busca universal passaram a direcionar corretamente para as rotas reais dos registros, corrigindo links gerados com nomes de tabelas. <span class="refs">NUM-887</span></li>
+          </ul>
+        </section>
+      </article>
+
+      <article class="nota">
         <h2>4 de setembro de 2026</h2>
         
         <section data-modulo="Agentes de IA">
