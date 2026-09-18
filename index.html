@@ -74,9 +74,12 @@
         <option value="CRM">CRM</option>
         <option value="Financeiro">Financeiro</option>
         <option value="Hospitalar">Hospitalar</option>
+        <option value="Imóveis">Imóveis</option>
         <option value="Integrações">Integrações</option>
+        <option value="Notas Fiscais">Notas Fiscais</option>
         <option value="Notificações">Notificações</option>
         <option value="PABX">PABX</option>
+        <option value="Planejamento">Planejamento</option>
         <option value="Protocolos">Protocolos</option>
         <option value="Suprimentos">Suprimentos</option>
         <option value="Tarefas">Tarefas</option>
@@ -84,6 +87,175 @@
       </select>
     </label>
   
+      <article class="nota">
+        <h2>18 de setembro de 2026</h2>
+        
+        <section data-modulo="Agentes de IA">
+          <h3>Agentes de IA</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> Aprimoramentos de segurança e lint no cliente do módulo de agentes. <span class="refs">NUM-1689</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Apoio">
+          <h3>Apoio</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> A aba de SKUs no resumo do material passou a permitir a criação de novos SKUs diretamente por uma tabela com edição em linha. <span class="refs">NUM-2272</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Assistente de IA">
+          <h3>Assistente de IA</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> Otimizações de desempenho e tratamento de erros no processamento de ferramentas e consultas do assistente. <span class="refs">NUM-1967, NUM-1489, NUM-1433, NUM-1215, NUM-1214</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Avaliações">
+          <h3>Avaliações</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> Padronização de títulos e mensagens em snackbars no módulo de avaliações. <span class="refs">NUM-1524</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Checklist">
+          <h3>Checklist</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Adicionada configuração de formulário para permitir a edição de respostas já enviadas e a reabertura do preenchimento. <span class="refs">NUM-1485</span></li>
+            <li><span class="selo novidade">Novidade</span> Adicionado suporte para submissão de questionários com controle de prazos e submissões validadas no servidor. <span class="refs">NUM-1502</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Corrigido o registro do módulo checklist que rejeitava a configuração de alçadas em formulários. <span class="refs">NUM-2201</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O campo do tipo Interruptor (Sim/Não) marcado como obrigatório passou a aceitar &quot;Não&quot; (off) como resposta válida. <span class="refs">NUM-2135</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Corrigida a acentuação do texto do botão de cadastro de formulários. <span class="refs">NUM-2039</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A edição de horários de uma agenda passou a validar obrigatoriamente a inclusão de datas específicas ou dias da semana. <span class="refs">NUM-1789</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Contratos">
+          <h3>Contratos</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> O stepper de cadastro de contratos passou a validar obrigatoriamente a seleção de Empresa, Centro de Custo e Unidade de Negócio. <span class="refs">NUM-1827</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O sistema de consulta de contratos adotou a agregação de raiz, melhorando o desempenho e os totalizadores do rodapé. <span class="refs">NUM-1768</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O campo de valor liberado igual a zero em Liberação de Caução passou a ser persistido e lido corretamente. <span class="refs">NUM-1283</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Removido o campo Empresa da seção de apropriações e aplicada a validação cruzada com a Matriz de Centro de Custo e Unidade de Negócio. <span class="refs">NUM-1435</span></li>
+          </ul>
+        </section>
+        <section data-modulo="CRM">
+          <h3>CRM</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Adicionado suporte para envio de e-mails diretamente pela caixa vinculada ao canal, mantendo a continuidade da thread. <span class="refs">NUM-1942</span></li>
+            <li><span class="selo novidade">Novidade</span> Adicionado suporte para gerenciamento de assunto, corpo em HTML sanitizado e destinatários em mensagens de e-mail. <span class="refs">NUM-1938</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Hospitalar">
+          <h3>Hospitalar</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Adicionada a opção para indicar na guia se o solicitante é o hospital, permitindo flexibilizar o vínculo do médico e ampliar o autocomplete de convênios. <span class="refs">NUM-2287</span></li>
+            <li><span class="selo novidade">Novidade</span> O portal passou a listar os planos do convênio, permitindo que a guia nascida no portal registre o plano correspondente. <span class="refs">NUM-2250</span></li>
+            <li><span class="selo novidade">Novidade</span> Adicionada a aba de convênios no cadastro do médico, permitindo vincular novos convênios e informar os respectivos códigos diretamente. <span class="refs">NUM-2173</span></li>
+            <li><span class="selo novidade">Novidade</span> Adicionada a possibilidade de cadastrar o código do hospital no sistema externo diretamente, permitindo o mapeamento no payload da guia. <span class="refs">NUM-2153</span></li>
+            <li><span class="selo novidade">Novidade</span> Adicionada a aba de médicos vinculados no drawer do hospital, permitindo visualizar e revogar vínculos individuais. <span class="refs">NUM-2134</span></li>
+            <li><span class="selo novidade">Novidade</span> Adicionada ação para disponibilizar o hospital no Portal do Hospital diretamente pela gestão de hospitais. <span class="refs">NUM-2119</span></li>
+            <li><span class="selo novidade">Novidade</span> Adicionada a ação &quot;Guia sem OPME&quot; para remover automaticamente os itens de OPME e prosseguir direto para a solicitação no convênio. <span class="refs">NUM-2100</span></li>
+            <li><span class="selo novidade">Novidade</span> Permitida a edição direta da guia pelo hospital em qualquer etapa anterior à solicitação no convênio. <span class="refs">NUM-2099</span></li>
+            <li><span class="selo novidade">Novidade</span> Adicionada a ação &quot;Recriar guia&quot; para copiar os dados de guias aprovadas vencidas e reiniciar o fluxo no hospital. <span class="refs">NUM-2098</span></li>
+            <li><span class="selo novidade">Novidade</span> Adicionado passo opcional de alteração de itens no stepper da análise para inclusão de pacotes, acomodações e medicamentos. <span class="refs">NUM-1764</span></li>
+            <li><span class="selo novidade">Novidade</span> O OPME foi transformado em um processo próprio no hospitalar, permitindo gerenciar o mapeamento de termos e materiais concretos. <span class="refs">NUM-1820</span></li>
+            <li><span class="selo novidade">Novidade</span> Adicionado o passo de Medicamentos no stepper de cadastro de materiais e OPME da guia. <span class="refs">NUM-880</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A lista de SKUs dos materiais voltou a carregar corretamente e o item pedido pelo médico não some mais em silêncio ao salvar a aba. <span class="refs">NUM-2321</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O kanban de cadastro de guias não permite mais a exclusão ou alteração de cor e nome das colunas, alinhando-se ao comportamento do acompanhamento. <span class="refs">NUM-2312</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O kanban de cadastro de guias passou a preencher corretamente os campos de hospital e local de internação nos cards, evitando que caiam em &quot;Não atribuído&quot;. <span class="refs">NUM-2310</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O primeiro passo do fluxo de edição de OPME (&quot;Termos&quot;) passou a permitir a adição de materiais com o mesmo formato do resumo da guia. <span class="refs">NUM-2302</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Termos habilitados no catálogo de materiais agora são reconhecidos e selecionados normalmente no passo de Termos da guia. <span class="refs">NUM-2301</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O drawer da guia na aba de materiais passou a exibir um badge com a indicação &quot;Necessidade de OPME&quot; após o convênio. <span class="refs">NUM-2300</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O campo de convênio no portal passou a filtrar as opções pelos convênios vinculados ao médico ou ao hospital conforme a regra de solicitação. <span class="refs">NUM-2292</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O bloco de dados do solicitante na guia TISS passou a levar corretamente o código do médico no convênio quando a solicitação é feita por ele. <span class="refs">NUM-2290</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Adicionada a opção para indicar necessidade de OPME, dispensando o vínculo estrito do médico quando a solicitação é respondida pelo hospital. <span class="refs">NUM-2289</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A validação do vínculo entre médico e convênio passou a ocorrer uma única vez na criação da guia, evitando bloqueios indevidos por atualizações posteriores. <span class="refs">NUM-2288</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O interruptor de habilitar e desabilitar SKUs no resumo do material passou a atualizar o estado na tela imediatamente, sem precisar atualizar a página. <span class="refs">NUM-2277</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Materiais de guias vindas do portal do hospital passaram a ser validados automaticamente ao chegar na etapa de OPME. <span class="refs">NUM-2258</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Corrigido o problema que mantinha a pendência &quot;Central de guias responsável pela solicitação&quot; visível permanentemente mesmo após preenchida. <span class="refs">NUM-2257</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O card na coluna &quot;Aguardando envio&quot; do portal do hospital passou a exibir apenas a ação de envio, permitindo a edição de todas as informações dentro do drawer. <span class="refs">NUM-2256</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A aba de catálogo nas telas de habilitação passou a exibir todos os itens, inclusive os já habilitados. <span class="refs">NUM-2252</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O anexo de orçamento de OPME agora é removido automaticamente ao acionar a ação &quot;Guia sem OPME&quot;. <span class="refs">NUM-2248</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Corrigido erro de leitura em identificadores que impediava a aprovação da réplica do médico no tenant do hospital. <span class="refs">NUM-2232</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A réplica do médico no tenant do hospital passou a habilitar corretamente os CBOs correspondentes, permitindo a aprovação do vínculo. <span class="refs">NUM-2215</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A réplica do médico no tenant do hospital passou a preencher corretamente o CRM, data de nascimento e sexo. <span class="refs">NUM-2217, NUM-2172</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O job de habilitação de materiais passou a reconstruir os índices de forma otimizada sem falhar por permissões. <span class="refs">NUM-2208</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O drawer de SKUs passou a exibir os SKUs desabilitados para permitir reativá-los facilmente. <span class="refs">NUM-2144</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O botão &quot;Adicionar do Apoio&quot; passou a ofertar corretamente apenas materiais sem registro ANVISA e sem TUSS 19, respeitando as regras de catálogo. <span class="refs">NUM-2143</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O código do convênio digitado no OPME agora é salvo automaticamente como codificação para ser reaproveitado nas próximas guias. <span class="refs">NUM-2139</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A lista de termos do OPME foi aprimorada para distinguir o produto pedido dos equivalentes e melhorar a legibilidade. <span class="refs">NUM-2136</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O SKU selecionado no cadastro da guia agora preenche e resolve a linha no passo de Termos do OPME automaticamente. <span class="refs">NUM-2132</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Habilitar um termo no catálogo agora gerencia o SKU específico em vez de reativar toda a família de produtos. <span class="refs">NUM-2125</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A aba de catálogo TUSS passou a exibir corretamente as colunas de Código Anvisa, Fabricante e Registro. <span class="refs">NUM-2220, NUM-2120</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O campo de quantidade no procedimento da guia passou a ser obrigatório e validado adequadamente. <span class="refs">NUM-1746</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O dropdown de busca de termos no OPME passou a exibir o Código TUSS nas opções para facilitar a identificação. <span class="refs">NUM-1836</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Corrigido erro que impedia a gravação ao fixar um termo de material habilitado no OPME. <span class="refs">NUM-1834</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Removidas as telas e fluxos legados de gestão de secretárias, centralizando o acesso por usuários do tenant. <span class="refs">NUM-1828</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A busca do Catálogo TUSS foi otimizada em duas fases para garantir alta performance sem lentidão na tela. <span class="refs">NUM-1478</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Termos com registro ANVISA vencido ou irregular foram impedidos de ser habilitados ou usados nas guias. <span class="refs">NUM-1415</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Imóveis">
+          <h3>Imóveis</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> Padronização de consultas GraphQL e políticas de cache no módulo de imóveis. <span class="refs">NUM-902</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Notas Fiscais">
+          <h3>Notas Fiscais</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> Adicionada validação de domínio para os argumentos de finalidade, presença e meio na emissão de NF-e. <span class="refs">NUM-587</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Notificações">
+          <h3>Notificações</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Implementada a retomada do fluxo de notificações ao vivo utilizando o ID do último evento para evitar perda de mensagens na reconexão. <span class="refs">NUM-1442</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O modal de confirmação ao excluir todas as notificações passou a ser exibido acima do painel, garantindo que o botão fique clicável. <span class="refs">NUM-2113</span></li>
+          </ul>
+        </section>
+        <section data-modulo="PABX">
+          <h3>PABX</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Adicionada publicação de eventos de bilhetagem para monitoramento de uso de ramais ativos. <span class="refs">NUM-1419, NUM-1324</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Planejamento">
+          <h3>Planejamento</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> Padronização de títulos e mensagens em snackbars no módulo de orçamento. <span class="refs">NUM-1533</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Protocolos">
+          <h3>Protocolos</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> Corrigido o comportamento do botão de opções no drawer de resumo para evitar a exibição acidental do menu de perfil. <span class="refs">NUM-1775</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Adicionada rolagem vertical no drawer de resumo de protocolos para exibir todas as seções, incluindo o histórico. <span class="refs">NUM-1773</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Corrigido o formato de data no prazo limite de protocolos, evitando divergências de dias entre o cabeçalho e a grade. <span class="refs">NUM-1496, NUM-1332</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Corrigido o reconhecimento de assinaturas desenhadas no campo de confirmação de devolução e entrega. <span class="refs">NUM-1508, NUM-1333</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Suprimentos">
+          <h3>Suprimentos</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> O campo &quot;Quantidade&quot; no formulário de materiais da solicitação passou a exibir corretamente o destaque em vermelho em caso de erro de validação. <span class="refs">NUM-1740</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A validação de fechamento do mapa de cotação passou a somar corretamente o valor do frete ao total esperado. <span class="refs">NUM-826</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Tarefas">
+          <h3>Tarefas</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> Padronização de títulos e mensagens em snackbars no módulo de tarefas. <span class="refs">NUM-1520</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Plataforma">
+          <h3>Plataforma</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> O texto de exemplo do campo de busca em quadros Kanban passou a ser &quot;Buscar...&quot; de forma neutra em vez de mencionar tarefas. <span class="refs">NUM-2308</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O breadcrumb dos quadros Kanban agora restaura a visão original de colunas ao voltar para &quot;Todos os Cards&quot; após um drill-down. <span class="refs">NUM-2307</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Corrigido o erro que esvaziava a lista de cards ao comprimir e expandir uma coluna no Kanban. <span class="refs">NUM-2306</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A raiz do sistema passou a direcionar automaticamente os médicos diretamente para o Portal do Hospital. <span class="refs">NUM-2260</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Corrigido o problema que fazia a navegação entre módulos retornar ao módulo de origem. <span class="refs">NUM-2259</span></li>
+          </ul>
+        </section>
+      </article>
+
       <article class="nota">
         <h2>11 de setembro de 2026</h2>
         
