@@ -70,6 +70,7 @@
         <option value="Assistente de IA">Assistente de IA</option>
         <option value="Avaliações">Avaliações</option>
         <option value="Checklist">Checklist</option>
+        <option value="Clínicas">Clínicas</option>
         <option value="Contratos">Contratos</option>
         <option value="CRM">CRM</option>
         <option value="Financeiro">Financeiro</option>
@@ -80,6 +81,7 @@
         <option value="Notificações">Notificações</option>
         <option value="PABX">PABX</option>
         <option value="Planejamento">Planejamento</option>
+        <option value="Portal do Hospital">Portal do Hospital</option>
         <option value="Protocolos">Protocolos</option>
         <option value="Suprimentos">Suprimentos</option>
         <option value="Tarefas">Tarefas</option>
@@ -87,6 +89,78 @@
       </select>
     </label>
   
+      <article class="nota">
+        <h2>25 de setembro de 2026</h2>
+        
+        <section data-modulo="Clínicas">
+          <h3>Clínicas</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> O drawer de convênios do médico ganhou título descritivo, melhor organização das ações no rodapé e listagem padronizada. <span class="refs">NUM-2362, NUM-2336</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Os drawers de resumo de médicos e pacientes ganharam a aba de histórico de auditoria. <span class="refs">NUM-2348</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O formulário de identificação no resumo do paciente deixou de exibir o campo de nome da mãe. <span class="refs">NUM-2330</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O fluxo de cadastro de pacientes foi reorganizado para seguir a mesma ordem de etapas dos demais módulos, separando dados pessoais e convênios. <span class="refs">NUM-2283</span></li>
+            <li><span class="selo correcao">Correção</span> As datas de nascimento e validade de carteirinha na etapa de conclusão do cadastro de pacientes passaram a ser exibidas no formato brasileiro. <span class="refs">NUM-2421</span></li>
+            <li><span class="selo correcao">Correção</span> O botão de editar dados pessoais na revisão do cadastro de pacientes agora direciona para o formulário correto. <span class="refs">NUM-2420</span></li>
+            <li><span class="selo correcao">Correção</span> Os campos de contato no resumo do paciente agora exibem os rótulos corretos para telefone e e-mail. <span class="refs">NUM-2417</span></li>
+            <li><span class="selo correcao">Correção</span> O resumo de pedidos de acesso agora exibe corretamente os ícones de tela cheia, atualização e fechamento no topo. <span class="refs">NUM-2410</span></li>
+            <li><span class="selo correcao">Correção</span> O cadastro de pacientes passou a exigir apenas o convênio e o número da carteirinha, tornando a validade e o anexo opcionais conforme o contrato. <span class="refs">NUM-2365</span></li>
+            <li><span class="selo correcao">Correção</span> O formulário de edição de médicos agora exibe o CPF bloqueado para consulta. <span class="refs">NUM-2332</span></li>
+            <li><span class="selo correcao">Correção</span> O cadastro de convênios do paciente passou a destacar corretamente os campos obrigatórios não preenchidos e a incluir rolagem no painel de edição. <span class="refs">NUM-2331, NUM-2329</span></li>
+            <li><span class="selo correcao">Correção</span> O CPF do médico no drawer de resumo passou a ser exibido completo, sem mascaramento. <span class="refs">NUM-2328</span></li>
+          </ul>
+        </section>
+        <section data-modulo="CRM">
+          <h3>CRM</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Novos recursos de gestão de atendimento conversacional com relógio de resposta por ciclo de mensagens e metas configuráveis por canal. <span class="refs">NUM-2168, NUM-2167, NUM-2166</span></li>
+            <li><span class="selo novidade">Novidade</span> Novas mensagens automáticas de sistema personalizadas por canal para o atendimento. <span class="refs">NUM-2037</span></li>
+            <li><span class="selo novidade">Novidade</span> Integração aprimorada para recebimento e processamento de e-mails do Microsoft 365 como conversas no CRM. <span class="refs">NUM-2027, NUM-1968, NUM-1941, NUM-1940, NUM-1939, NUM-1937, NUM-1936, NUM-1922</span></li>
+            <li><span class="selo novidade">Novidade</span> Canais de atendimento pessoais conectados por coexistência passaram a operar em modo restrito de leitura e auditoria, sem automações da plataforma. <span class="refs">NUM-1915, NUM-1914, NUM-1913, NUM-1910</span></li>
+            <li><span class="selo novidade">Novidade</span> Aba de histórico de auditoria integrada aos drawers de resumo do CRM. <span class="refs">NUM-1770, NUM-1040</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Ações de encerramento de conversas ganharam destaque direto na barra superior de atendimento. <span class="refs">NUM-1367</span></li>
+            <li><span class="selo correcao">Correção</span> A rolagem do chat de atendimento agora permanece na posição escolhida pelo usuário ao ler mensagens anteriores. <span class="refs">NUM-2162</span></li>
+            <li><span class="selo correcao">Correção</span> Links enviados por clientes no chat do CRM agora são renderizados como elementos clicáveis e ajustados ao layout da mensagem. <span class="refs">NUM-2151</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Hospitalar">
+          <h3>Hospitalar</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> A tela de guias agora exibe avisos quando há pendências ou recusas de registro no sistema externo, permitindo reprocessar a guia diretamente pelo alerta. <span class="refs">NUM-2443</span></li>
+            <li><span class="selo novidade">Novidade</span> Os cards do quadro de acompanhamento de guias passaram a exibir alertas visuais de risco de glosa. <span class="refs">NUM-2346</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A comunicação de leitura e gravação de guias passou a ser realizada de forma interna no servidor, agilizando o carregamento das telas de atendimento. <span class="refs">NUM-2434</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A aba do médico solicitante no resumo da guia deixou de exibir campos de e-mail e telefone que não faziam parte do cadastro. <span class="refs">NUM-2414</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Os filtros do quadro de acompanhamento de guias foram atualizados para um modelo mais ágil e integrado. <span class="refs">NUM-2326</span></li>
+            <li><span class="selo correcao">Correção</span> Desabilitar um CBO vinculado a médico agora é bloqueado pelo sistema, evitando a perda de cadastros. <span class="refs">NUM-2454</span></li>
+            <li><span class="selo correcao">Correção</span> Erros de validação ao criar guias agora exibem avisos claros na tela, mantendo o formulário aberto para correção. <span class="refs">NUM-2431</span></li>
+            <li><span class="selo correcao">Correção</span> O código do solicitante deixou de ser obrigatório ao cadastrar um convênio para o hospital. <span class="refs">NUM-2351</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida falha que impedia a execução da análise automática de risco de glosa em guias compartilhadas. <span class="refs">NUM-2335, NUM-2334</span></li>
+            <li><span class="selo correcao">Correção</span> O filtro por registro ANVISA e fabricante no catálogo de materiais foi otimizado para suportar buscas amplas sem falhas de desempenho. <span class="refs">NUM-241, NUM-2148</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Portal do Hospital">
+          <h3>Portal do Hospital</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> O plano de saúde do paciente passou a ser vinculado diretamente à carteirinha, simplificando o preenchimento no cadastro de guias. <span class="refs">NUM-2390</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Os números de telefone exibidos nos cards do quadro de guias passaram a contar com máscara de formatação. <span class="refs">NUM-2424, NUM-2404</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A seção de contato do paciente no cadastro de guias passou a exibir também o e-mail cadastrado. <span class="refs">NUM-2418, NUM-2416</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O drawer de edição de carteirinhas passou a utilizar listagem organizada e gravação unificada no rodapé. <span class="refs">NUM-2361, NUM-2360</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Os campos de tipo e indicação de WhatsApp no cadastro de telefones da guia passaram a utilizar o mesmo padrão visual de seleção por botões do restante do sistema. <span class="refs">NUM-2275</span></li>
+            <li><span class="selo correcao">Correção</span> A etapa de classificação de procedimentos agora valida os campos obrigatórios, bloqueando o avanço quando houver dados faltando. <span class="refs">NUM-2428</span></li>
+            <li><span class="selo correcao">Correção</span> A data de emissão do RG do paciente agora é preenchida corretamente ao ser editada a partir do resumo da guia. <span class="refs">NUM-2419</span></li>
+            <li><span class="selo correcao">Correção</span> As abas de procedimentos e materiais no resumo da guia agora ficam ocultas enquanto a guia estiver na etapa inicial de cadastro. <span class="refs">NUM-2415</span></li>
+            <li><span class="selo correcao">Correção</span> A edição de dados do paciente no resumo da guia agora abre o formulário diretamente, sem telas intermediárias desnecessárias. <span class="refs">NUM-2403</span></li>
+            <li><span class="selo correcao">Correção</span> Os drawers de edição do paciente no cadastro de guias passaram a exibir corretamente os botões de ação no rodapé e o espaçamento lateral. <span class="refs">NUM-2359</span></li>
+            <li><span class="selo correcao">Correção</span> A etapa de revisão no cadastro de materiais da guia foi padronizada para exibir apenas os itens efetivamente adicionados. <span class="refs">NUM-2253</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Plataforma">
+          <h3>Plataforma</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Novo seletor unificado de convênio e solicitante no cadastro de guias, cruzando automaticamente as carteirinhas do paciente com o credenciamento do médico e do hospital. <span class="refs">NUM-2354</span></li>
+          </ul>
+        </section>
+      </article>
+
       <article class="nota">
         <h2>18 de setembro de 2026</h2>
         
