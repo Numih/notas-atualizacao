@@ -90,6 +90,84 @@
     </label>
   
       <article class="nota">
+        <h2>2 de outubro de 2026</h2>
+        
+        <section data-modulo="Agentes de IA">
+          <h3>Agentes de IA</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Adicionada a página Conexões externas, permitindo configurar agentes de IA e testar a conexão com o servidor do sistema. <span class="refs">NUM-2692</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Anexos não suportados ou não lidos agora informam claramente o modelo de IA sobre a indisponibilidade do conteúdo. <span class="refs">NUM-2646</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Apoio">
+          <h3>Apoio</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Adicionado suporte ao documento de identidade CIN (Carteira de Identidade Nacional), preenchendo automaticamente o número com o CPF nas telas de cadastro. <span class="refs">NUM-2538, NUM-2519</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida falha no cadastro de convênios pela Receita Federal para CNPJs que não constam nas bases da ANS. <span class="refs">NUM-2675</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Assistente de IA">
+          <h3>Assistente de IA</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> Atualizada a curadoria e o catálogo do assistente de IA para suportar o teste de conexão de agentes externos. <span class="refs">NUM-2693</span></li>
+            <li><span class="selo correcao">Correção</span> O assistente de IA agora gera corretamente linhas separadas na guia para SKUs distintos do mesmo material. <span class="refs">NUM-2612</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Checklist">
+          <h3>Checklist</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> Realizada revisão completa das roles e permissões de acesso do módulo de checklist. <span class="refs">NUM-798</span></li>
+          </ul>
+        </section>
+        <section data-modulo="CRM">
+          <h3>CRM</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> Mensagens de WhatsApp com figurinhas ou localizações agora enviam um aviso explícito ao modelo de IA para evitar respostas inventadas. <span class="refs">NUM-2647</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Hospitalar">
+          <h3>Hospitalar</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Avanços no Tasy agora atualizam automaticamente a guia correspondente no sistema, incluindo etapas de OPME, envio e desfecho. <span class="refs">NUM-2686, NUM-2689, NUM-2690</span></li>
+            <li><span class="selo novidade">Novidade</span> Adicionada opção no Kanban de Regulação para ordenar as guias por mais antiga ou mais recente. <span class="refs">NUM-2636</span></li>
+            <li><span class="selo novidade">Novidade</span> O sistema agora bloqueia a edição de materiais de OPME fora da etapa específica e exibe avisos quando etapas forem registradas manualmente. <span class="refs">NUM-2627</span></li>
+            <li><span class="selo novidade">Novidade</span> A etapa de documentos da guia passou a permitir o envio de arquivo único consolidado ou de documentos separados de identidade, carteirinha e guia. <span class="refs">NUM-2513</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O replay de guias do Tasy agora dispensa itens que servem apenas para auxiliar a solicitação ao convênio. <span class="refs">NUM-2695</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A guia agora pode ser devolvida de Aguardando solicitação para Avaliação Hospital sempre que não estiver bloqueada. <span class="refs">NUM-2673</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O kanban de acompanhamento de guias ganhou um selo visual e um filtro para distinguir pedidos originados no portal dos cadastrados pelo próprio hospital. <span class="refs">NUM-2672</span></li>
+            <li><span class="selo melhoria">Melhoria</span> As fases do OPME e os estágios no sistema externo agora seguem rigorosamente o status da guia, inclusive em casos de retrocesso. <span class="refs">NUM-2670</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Medicamentos agora podem ser editados livremente mesmo após a conclusão da etapa de OPME. <span class="refs">NUM-2628</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A exclusão de convênios foi desativada, sendo permitido apenas inativá-los para preservar vínculos com médicos e prestadores. <span class="refs">NUM-2617</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Otimizada a busca de termos TUSS de OPME e de materiais para suportar listas extensas com carregamento contínuo. <span class="refs">NUM-2539, NUM-2537, NUM-2517, NUM-2516, NUM-2514</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Ações do drawer de OPME passaram a carregar imediatamente, independentemente de consultas secundárias. <span class="refs">NUM-2524</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O nome do hospital responsável passou a ser exibido na capa do dossiê do registro externo. <span class="refs">NUM-2478</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O endereço do paciente passou a ser opcional no cadastro e no portal do hospital. <span class="refs">NUM-2470</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Adicionado o campo de classificação de guias, permitindo ao hospital editar o tipo de guia, tipo de internação e diárias antes de enviar ao convênio. <span class="refs">NUM-2453</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Acomodação e pacotes foram unificados em uma única lista de itens do convênio no padrão TISS. <span class="refs">NUM-2452</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido erro na edição da cobertura da guia que apagava o nome do convênio ao salvar. <span class="refs">NUM-2709</span></li>
+            <li><span class="selo correcao">Correção</span> O histórico da guia no portal do hospital agora atribui corretamente cada alteração ao usuário que efetivamente a realizou. <span class="refs">NUM-2681</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido erro que travava a gravação de correlações no painel quando havia guias descartadas. <span class="refs">NUM-2669</span></li>
+            <li><span class="selo correcao">Correção</span> Restringida a visibilidade de guias em rascunho para que o hospital não enxergue cadastros em andamento de outras clínicas. <span class="refs">NUM-2611</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Integrações">
+          <h3>Integrações</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Aprimorada a sincronização de guias para atualizar procedimentos e identificações diretamente no sistema externo sem recriar registros. <span class="refs">NUM-2684</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Plataforma">
+          <h3>Plataforma</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> A ação de abrir arquivos no visualizador passou a utilizar o conteúdo em memória, evitando requisições desnecessárias ao servidor. <span class="refs">NUM-2671, NUM-2644</span></li>
+            <li><span class="selo melhoria">Melhoria</span> URLs de download e visualização de arquivos passaram a ser restritas a itens devidamente utilizados, protegendo documentos contra exclusão indevida. <span class="refs">NUM-2643</span></li>
+            <li><span class="selo correcao">Correção</span> Arquivos gerados com entidades vinculadas, como o dossiê da guia, deixaram de expirar e ser apagados indevidamente após 24 horas. <span class="refs">NUM-2603, NUM-2602</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida duplicação de aspas no caminho de busca de funções ao clonar tenants. <span class="refs">NUM-2600</span></li>
+          </ul>
+        </section>
+      </article>
+
+      <article class="nota">
         <h2>25 de setembro de 2026</h2>
         
         <section data-modulo="Clínicas">
