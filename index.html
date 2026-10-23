@@ -90,6 +90,165 @@
     </label>
   
       <article class="nota">
+        <h2>23 de outubro de 2026</h2>
+        
+        <section data-modulo="Agentes de IA">
+          <h3>Agentes de IA</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> O limite de caracteres da rotina do agente foi ampliado para 8.000. <span class="refs">NUM-3105</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O limite do histórico reenviado ao modelo de IA foi ampliado para evitar cortes na conversa. <span class="refs">NUM-3069</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Apoio">
+          <h3>Apoio</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Mutations diretas de alteração de acessos passaram a abrir pedidos formais de avaliação. <span class="refs">NUM-2818</span></li>
+            <li><span class="selo novidade">Novidade</span> A saída de usuários da organização passou a remover automaticamente seus vínculos de acesso. <span class="refs">NUM-2817</span></li>
+            <li><span class="selo novidade">Novidade</span> Adicionada a dimensão de canal do CRM na matriz de escopos por nível. <span class="refs">NUM-2806</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Adicionado aviso visual no cadastro de pessoa jurídica quando a empresa estiver baixada ou inapta na Receita Federal. <span class="refs">NUM-2837</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Departamentos que possuem membros, acessos ou pedidos em andamento deixaram de poder ser excluídos. <span class="refs">NUM-2814</span></li>
+            <li><span class="selo correcao">Correção</span> Pedidos de matriz sem alterações não travam mais o escopo quando a trava de assinatura está ativa. <span class="refs">NUM-3101</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o erro que exibia um card vazio na lista de contatos de uma pessoa. <span class="refs">NUM-3094</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida a validação de documentos que impediava a edição de outros documentos quando o RG havia sido cadastrado sem anexo. <span class="refs">NUM-3093</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigidas consultas de dados no apoio que falhavam por divergências no esquema GraphQL. <span class="refs">NUM-3062</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o erro na edição de contatos que apagava a marcação do telefone principal. <span class="refs">NUM-3045</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida a publicação de eventos de alteração de equipe no vínculo de nível. <span class="refs">NUM-3016</span></li>
+            <li><span class="selo correcao">Correção</span> O processo de assinatura retroativa de acessos passou a ser executado em lotes para otimizar o uso de memória. <span class="refs">NUM-3006</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o tratamento de vínculos ao aceitar convites de acesso. <span class="refs">NUM-2820</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido erro que permitia incluir usuários inativos ao aprovar pedidos de membros pendentes. <span class="refs">NUM-2819</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Avaliações">
+          <h3>Avaliações</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> A tabela de fluxos de avaliação passou a ser ordenada por módulo e por nome de fluxo em ordem alfabética. <span class="refs">NUM-2724</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o encerramento prematuro do cliente de criptografia que impedia a assinatura de decisões. <span class="refs">NUM-3005</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida a formatação e a conversão de fuso horário na exibição da data efetiva e do histórico de avaliações. <span class="refs">NUM-2727, NUM-2881</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o fuso horário exibido nas notificações de avaliações aprovadas. <span class="refs">NUM-2726</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Checklist">
+          <h3>Checklist</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Adicionadas regras de permissão para restringir o acesso ao painel e refinar as ações na linha de respostas do módulo Checklist. <span class="refs">NUM-2657</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Contratos">
+          <h3>Contratos</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Implementada a nova versão do módulo de Contratos, trazendo gestão completa de versões, aditivos, medições, faturamento e integrações financeiras. <span class="refs">NUM-2939, NUM-2942, NUM-2944, NUM-2945, NUM-2946, NUM-2947</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A listagem de Modelos foi alinhada ao padrão de navegação principal, com a adição de checkboxes de seleção, aba &quot;Visão geral&quot; e botões padronizados. <span class="refs">NUM-3141</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A listagem de Tipos de modelo foi alinhada ao padrão de navegação principal, ganhando checkboxes de seleção, aba &quot;Visão geral&quot; e botões padronizados. <span class="refs">NUM-3115</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Clicar em um item na listagem de Modelos agora abre o drawer de resumo em vez do stepper de edição. <span class="refs">NUM-3109</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Corrigido o alinhamento e a indicação de campos obrigatórios na primeira etapa do cadastro de modelos. <span class="refs">NUM-3106</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Clicar em um item na listagem de Tipos de modelo agora abre o drawer de resumo em vez do stepper de edição. <span class="refs">NUM-3095</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Melhorado o layout e o alinhamento dos campos na etapa de caução do cadastro de tipos de modelo. <span class="refs">NUM-3083</span></li>
+            <li><span class="selo correcao">Correção</span> Adicionado o indicativo de campo obrigatório no rótulo da primeira etapa do cadastro de tipos de modelo. <span class="refs">NUM-3102</span></li>
+            <li><span class="selo correcao">Correção</span> O formulário de cadastro de tipos de modelo passou a contar com uma etapa final de conclusão com o resumo dos dados preenchidos. <span class="refs">NUM-3096</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Financeiro">
+          <h3>Financeiro</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Adicionada operação para ajustar teto e piso de contas correntes existentes. <span class="refs">NUM-2994</span></li>
+            <li><span class="selo novidade">Novidade</span> Disponibilizada a leitura de saldos de contas por status através do cliente Go. <span class="refs">NUM-2993</span></li>
+            <li><span class="selo novidade">Novidade</span> Adicionada operação para alterar o status de contas correntes (ativa, em encerramento, inativa). <span class="refs">NUM-2992</span></li>
+            <li><span class="selo novidade">Novidade</span> Adicionada operação para abrir contas correntes informando o identificador e configurando limites em uma única etapa. <span class="refs">NUM-2991</span></li>
+            <li><span class="selo novidade">Novidade</span> Adicionada a operação de estorno para transações realizadas diretas, sem cadeia de compensação. <span class="refs">NUM-2980</span></li>
+            <li><span class="selo novidade">Novidade</span> Implementada a regra que permite apenas uma avaliação em andamento por vez para cada título a pagar. <span class="refs">NUM-2967</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Otimizada a conferência de limites em contas correntes para evitar o travamento desnecessário de contas sem teto ou piso. <span class="refs">NUM-3059</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Otimizado o filtro de visibilidade de transações nas views de conta corrente. <span class="refs">NUM-3058</span></li>
+            <li><span class="selo correcao">Correção</span> Processos do avaliações com identificadores malformados agora retornam erros de validação claros. <span class="refs">NUM-3057</span></li>
+            <li><span class="selo correcao">Correção</span> A reabertura de contas correntes passou a validar todos os campos de status, saldo, datas e flags. <span class="refs">NUM-3056</span></li>
+            <li><span class="selo correcao">Correção</span> Padronizada a conferência de teto e piso para todas as dimensões na criação e aprovação de previsões. <span class="refs">NUM-3008</span></li>
+            <li><span class="selo correcao">Correção</span> Apenas centro de custo e plano de contas passam a nascer como dimensões de apropriação obrigatória. <span class="refs">NUM-2987</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida a geração da chave de idempotência na reaprovação de previsões financeiras. <span class="refs">NUM-2985</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida a aplicação de regras de segurança e escopo nas views de saldo e transações de contas correntes. <span class="refs">NUM-2983</span></li>
+            <li><span class="selo correcao">Correção</span> O estorno da compensação de transferências passou a estornar ambas as pontas simultaneamente. <span class="refs">NUM-2982</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o cálculo de consolidação de valores em obrigações que já possuíam baixa parcial. <span class="refs">NUM-2981</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida a validação de dimensões obrigatórias em transações de conta corrente. <span class="refs">NUM-2977</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o rateio em compensações que quitam o saldo pendente de obrigações parcialmente compensadas. <span class="refs">NUM-2976</span></li>
+            <li><span class="selo correcao">Correção</span> O estorno de compensações parciais agora devolve corretamente o valor à obrigação original. <span class="refs">NUM-2975</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Hospitalar">
+          <h3>Hospitalar</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> A busca de médicos habilitados passou a permitir a pesquisa pelo número do CRM. <span class="refs">NUM-3084</span></li>
+            <li><span class="selo novidade">Novidade</span> Aprovações feitas diretamente no Tasy agora trazem para a Numih o número da guia, a data da autorização e a validade. <span class="refs">NUM-3010</span></li>
+            <li><span class="selo novidade">Novidade</span> Adicionado suporte para reconhecer o estágio de autorização pendente de agendamento e o agendamento final de guias vindas do Tasy. <span class="refs">NUM-3009</span></li>
+            <li><span class="selo novidade">Novidade</span> Implementada a regra de intercâmbio de convênios para permitir o uso de carteiras de operadoras atendidas pelo convênio do hospital. <span class="refs">NUM-2895, NUM-2919</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Agora a central pode vincular guias de médicos diferentes do mesmo paciente e convênio para enviá-las em uma solicitação única ao convênio. <span class="refs">NUM-3029, NUM-3035, NUM-3036, NUM-3037, NUM-3038, NUM-3039, NUM-3040, NUM-3119, NUM-3130, NUM-3172, NUM-3187, NUM-3202</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O passo de convênio e plano na criação de nova guia agora seleciona automaticamente a carteirinha quando há apenas uma disponível. <span class="refs">NUM-3091</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O detalhe da guia vinculada foi simplificado para exibir as informações e ações de vínculo em um único alerta. <span class="refs">NUM-3067</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A automação de envio ao convênio passou a anexar o dossiê compilado da guia. <span class="refs">NUM-3015</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A consulta de status realizada pelo robô agora baixa o PDF da guia autorizada e o anexa na Numih e no Tasy. <span class="refs">NUM-3012</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Ajustada a regra para permitir que o operador escolha se a solicitação sai em nome do médico ou do hospital. <span class="refs">NUM-2997</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A aba de materiais no detalhe da guia passou a exibir a capitalização normalizada do nome técnico. <span class="refs">NUM-2830</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O campo de hospital passou a ser exibido no início do cadastro da guia, permitindo filtrar os médicos disponíveis pela unidade escolhida. <span class="refs">NUM-1490, NUM-1498</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o erro que impedia a conclusão de processos de OPME ao criá-los diretamente. <span class="refs">NUM-3200</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o problema em que o envio simultâneo de vários anexos fazia arquivos desaparecerem do formulário de documentos. <span class="refs">NUM-3197</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o bloqueio que impedia guias pendentes de cadastro de completarem o registro externo. <span class="refs">NUM-3192</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o erro no replay do Tasy que impediava a finalização e liberação de guias agendadas. <span class="refs">NUM-3191</span></li>
+            <li><span class="selo correcao">Correção</span> Guias em fase de cadastro no portal não bloqueiam mais a criação de novas guias para o mesmo paciente e convênio. <span class="refs">NUM-3156</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o erro que fazia o kanban de Acompanhamento zerar ao aplicar filtros de hospital, local de internação ou origem. <span class="refs">NUM-3154</span></li>
+            <li><span class="selo correcao">Correção</span> O rótulo da pendência de dados do paciente passou a citar a exigência do telefone. <span class="refs">NUM-3100</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o erro que exibia incorretamente a ação principal de envio ao OPME em guias sem materiais. <span class="refs">NUM-3092</span></li>
+            <li><span class="selo correcao">Correção</span> As datas exibidas no drawer da guia passaram a seguir o formato brasileiro (dd/mm/aaaa). <span class="refs">NUM-3090</span></li>
+            <li><span class="selo correcao">Correção</span> A correção da carteirinha em uma guia vinculada agora atualiza automaticamente as demais guias do mesmo grupo. <span class="refs">NUM-3089</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o preenchimento de múltiplos procedimentos iguais na solicitação de guias vinculadas. <span class="refs">NUM-3081</span></li>
+            <li><span class="selo correcao">Correção</span> A conclusão de OPME com termo genérico agora exibe corretamente o motivo da recusa do servidor. <span class="refs">NUM-3080</span></li>
+            <li><span class="selo correcao">Correção</span> A edição da guia foi desativada enquanto a automação realiza o envio ao convênio. <span class="refs">NUM-3070</span></li>
+            <li><span class="selo correcao">Correção</span> Movimentos manuais realizados após a fase de solicitação agora são replicados para todas as guias do grupo vinculado. <span class="refs">NUM-3068</span></li>
+            <li><span class="selo correcao">Correção</span> A alteração do hospital em uma guia em cadastro agora grava corretamente a nova unidade e seus dados derivados. <span class="refs">NUM-3066</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o reenvio de guias para que levem o número de carteirinha atualizado após a correção. <span class="refs">NUM-3065</span></li>
+            <li><span class="selo correcao">Correção</span> A remoção do anexo do RG no cadastro do paciente agora habilita corretamente o botão de salvar. <span class="refs">NUM-3051</span></li>
+            <li><span class="selo correcao">Correção</span> Guias em fase de cadastro agora acompanham as atualizações feitas posteriormente no cadastro do paciente. <span class="refs">NUM-3050</span></li>
+            <li><span class="selo correcao">Correção</span> Guias criadas por agentes agora preenchem automaticamente o telefone do paciente a partir do cadastro. <span class="refs">NUM-3044</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida a sincronização de senhas para evitar que a Numih sobrescreva senhas novas lançadas diretamente no Tasy. <span class="refs">NUM-3014</span></li>
+            <li><span class="selo correcao">Correção</span> A identificação de materiais de OPME do Tasy com o mesmo código TUSS agora trata empates ambíguos solicitando a escolha do usuário. <span class="refs">NUM-3013</span></li>
+            <li><span class="selo correcao">Correção</span> O robô de automação agora identifica formulários clínicos obrigatórios no portal do convênio e orienta a realização manual. <span class="refs">NUM-3004</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o cancelamento de guias no portal para impedir que guias já submetidas ao convênio sejam canceladas sem aviso. <span class="refs">NUM-2848</span></li>
+            <li><span class="selo correcao">Correção</span> O botão de download na aba de documentos do drawer da guia passou a abrir o arquivo em uma nova aba. <span class="refs">NUM-2574</span></li>
+          </ul>
+        </section>
+        <section data-modulo="PABX">
+          <h3>PABX</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> Atualizado o softphone e os componentes de PABX para o React 19. <span class="refs">NUM-3163</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida a consulta de filas dinâmicas por equipe após a reestruturação das tabelas de apoio. <span class="refs">NUM-3053</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida a leitura de membros de equipes nas filas do PABX. <span class="refs">NUM-3017</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Protocolos">
+          <h3>Protocolos</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> Consolidada a formatação de datas em todo o módulo utilizando os utilitários padrão do design system. <span class="refs">NUM-2821</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O telefone da pessoa cadastrada passou a exibir corretamente o DDI correspondente. <span class="refs">NUM-2641</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido o erro que exibia a mensagem &quot;Protocolo não encontrado&quot; ao abrir um protocolo recém-criado. <span class="refs">NUM-2691</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Suprimentos">
+          <h3>Suprimentos</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> Adicionado tooltip no ícone de contatos e removida a seta de voltar desnecessária no cabeçalho do drawer de contatos do fornecedor. <span class="refs">NUM-3079</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A aba de frete no drawer de resumo da cotação foi ajustada para exibir os valores referentes apenas aos fornecedores selecionados. <span class="refs">NUM-2917</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O campo de prioridade no drawer de resumo da cotação passou a exibir a formatação correta de maiúsculas e minúsculas. <span class="refs">NUM-2865</span></li>
+            <li><span class="selo correcao">Correção</span> Os botões de cancelar e salvar na aba de entregas do detalhe do fornecedor foram fixados no rodapé do drawer. <span class="refs">NUM-3072</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida a formatação de documentos, datas e status no drawer de edição de fornecedores do mapa de cotação. <span class="refs">NUM-3028</span></li>
+            <li><span class="selo correcao">Correção</span> Adicionado indicador visual de divergência de quantidade na distribuição por centro de custo ao finalizar cotações. <span class="refs">NUM-827</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Plataforma">
+          <h3>Plataforma</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> Atualizado o sistema inteiro para o React 19. <span class="refs">NUM-3159, NUM-3160, NUM-3161, NUM-3162</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O menu lateral recolhido agora exibe um menu flutuante com os submenus ao clicar em um grupo. <span class="refs">NUM-3131</span></li>
+          </ul>
+        </section>
+      </article>
+
+      <article class="nota">
         <h2>16 de outubro de 2026</h2>
         
         <section data-modulo="Agentes de IA">
