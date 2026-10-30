@@ -90,6 +90,70 @@
     </label>
   
       <article class="nota">
+        <h2>30 de outubro de 2026</h2>
+        
+        <section data-modulo="Apoio">
+          <h3>Apoio</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> O escopo de permissões e RLS foi integrado ao vínculo de nível de departamento, permitindo concessões por regra. <span class="refs">NUM-2471</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Assistente de IA">
+          <h3>Assistente de IA</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> O assistente de IA recebeu melhorias nas receitas e no catálogo para consultas de guias e pacientes com maior precisão. <span class="refs">NUM-3104</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O catálogo de operações do assistente de IA foi aprimorado com curadoria de sinônimos e receitas a partir das buscas reais. <span class="refs">NUM-3088</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A criação de guias pelo assistente passou a considerar o domínio informado e a incluir automaticamente o telefone principal no cadastro do paciente. <span class="refs">NUM-3085</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O assistente de IA passou a gravar automaticamente na guia recém-criada os dados confirmados, como indicação clínica e procedimentos. <span class="refs">NUM-3052</span></li>
+            <li><span class="selo melhoria">Melhoria</span> O assistente de IA foi ajustado para anexar automaticamente fotos de documentos recebidas na conversa ao cadastro da pessoa. <span class="refs">NUM-3046</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Contratos">
+          <h3>Contratos</h3>
+          <ul>
+            <li><span class="selo correcao">Correção</span> O cadastro de contratos na etapa de empresa e apropriação passou a filtrar corretamente a Unidade de Negócio e o Centro de Custo com base na matriz de vínculos. <span class="refs">NUM-3194</span></li>
+          </ul>
+        </section>
+        <section data-modulo="CRM">
+          <h3>CRM</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> Adicionados atalhos de teclado com comandos rápidos para a operação no CRM. <span class="refs">NUM-2581</span></li>
+            <li><span class="selo novidade">Novidade</span> Disponibilizada a visão de calendário de retornos e o popover para adiamento de conversas. <span class="refs">NUM-2580</span></li>
+            <li><span class="selo novidade">Novidade</span> Disponibilizado o quadro de atendimentos com colunas calculadas por tempo de inatividade. <span class="refs">NUM-2579</span></li>
+            <li><span class="selo novidade">Novidade</span> Disponibilizada a Central de mensagens para centralizar o atendimento de todos os canais com recursos de seleção e ações em lote. <span class="refs">NUM-2577, NUM-2570</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Hospitalar">
+          <h3>Hospitalar</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> A tabela da aba &quot;Meus vínculos&quot; em hospitais passou a exibir o endereço completo e a data do vínculo. <span class="refs">NUM-2158</span></li>
+            <li><span class="selo novidade">Novidade</span> A ordem das abas na tela de hospitais foi reorganizada, posicionando &quot;Meus vínculos&quot; como a primeira opção por padrão. <span class="refs">NUM-2157</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A aba de médicos credenciados do convênio passou a contar com paginação, busca por nome, CPF e código, além de inclusão e edição diretamente na grade. <span class="refs">NUM-3302</span></li>
+            <li><span class="selo melhoria">Melhoria</span> A listagem e o cadastro de origens em intercâmbio do hospital foram reformulados para suportar milhares de vínculos com paginação, filtros e ações em massa. <span class="refs">NUM-3299</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigida a ordem de gravação do processo de OPME para evitar divergências entre o portal e o sistema em caso de falhas. <span class="refs">NUM-3203</span></li>
+            <li><span class="selo correcao">Correção</span> O seletor de lateralidade de procedimentos no cadastro de guias passou a incluir a opção &quot;Não aplica&quot;, ajustando o comportamento do campo de quantidade. <span class="refs">NUM-2737</span></li>
+            <li><span class="selo correcao">Correção</span> O botão &quot;Adicionar novo&quot; no cadastro de pacientes da guia foi corrigido para direcionar para Clínicas em vez de Apoio. <span class="refs">NUM-2161</span></li>
+          </ul>
+        </section>
+        <section data-modulo="PABX">
+          <h3>PABX</h3>
+          <ul>
+            <li><span class="selo melhoria">Melhoria</span> Padronizados e ajustados os títulos e descrições dos avisos de notificação na interface do PABX. <span class="refs">NUM-1535</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido um problema na borda de PABX que causava a queda de chamadas de entrada após 32 segundos devido à perda de confirmação. <span class="refs">NUM-2761</span></li>
+          </ul>
+        </section>
+        <section data-modulo="Plataforma">
+          <h3>Plataforma</h3>
+          <ul>
+            <li><span class="selo novidade">Novidade</span> O histórico de alterações passou a agrupar as modificações por ação, exibindo seções dedicadas para cada tabela filha. <span class="refs">NUM-2889</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Corrigida a cor do rótulo nas variantes de borda dos botões para retornar à tonalidade original. <span class="refs">NUM-3330</span></li>
+            <li><span class="selo melhoria">Melhoria</span> Removido o limite máximo de linhas no modo de exportação em lote para permitir a listagem completa de grandes volumes de dados. <span class="refs">NUM-2048</span></li>
+            <li><span class="selo correcao">Correção</span> Corrigido um problema no componente de formulário que causava lentidão e travamento ao renderizar determinados cadastros. <span class="refs">NUM-2069</span></li>
+          </ul>
+        </section>
+      </article>
+
+      <article class="nota">
         <h2>23 de outubro de 2026</h2>
         
         <section data-modulo="Agentes de IA">
