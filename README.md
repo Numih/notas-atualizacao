@@ -25,7 +25,7 @@ O comentário HTML guarda as issues de origem e **é exibido na página** como r
 ## Configuração (uma única vez)
 
 1. **Segredos** em *Settings → Secrets and variables → Actions*:
-   - `LINEAR_API_KEY` — chave de API do usuário de serviço do Linear (não usar chave pessoal);
+   - `LINEAR_CLIENT_ID` e `LINEAR_CLIENT_SECRET` — credenciais do app OAuth «Numih CI» do Linear (secrets da organização; o script troca por um token de leitura a cada execução, sem chave pessoal);
    - `OPENROUTER_API_KEY` — chave do OpenRouter.
 2. **GitHub Pages**: *Settings → Pages*, servir da branch `main`, pasta `/ (root)`.
 3. **Backfill inicial**: executar o workflow manualmente (*Actions → Notas de atualização → Run workflow*) com a opção **backfill** marcada — gera notas mensais desde a marca-d'água inicial em `estado.json`.

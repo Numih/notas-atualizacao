@@ -21,7 +21,8 @@ import { fileURLToPath } from "node:url";
 const RAIZ = join(dirname(fileURLToPath(import.meta.url)), "..");
 const FUSO = "America/Sao_Paulo";
 
-const LINEAR_API_KEY = obrigatoria("LINEAR_API_KEY");
+const LINEAR_CLIENT_ID = obrigatoria("LINEAR_CLIENT_ID");
+const LINEAR_CLIENT_SECRET = obrigatoria("LINEAR_CLIENT_SECRET");
 const OPENROUTER_API_KEY = obrigatoria("OPENROUTER_API_KEY");
 const MODELO = process.env.OPENROUTER_MODEL || "anthropic/claude-sonnet-4.5";
 const BACKFILL = process.argv.includes("--backfill");
@@ -36,6 +37,27 @@ function obrigatoria(nome) {
 }
 
 // ---------------------------------------------------------------- Linear ---
+
+// Credencial do app OAuth «Numih CI» (client_credentials): um token novo a cada
+// execução, só com leitura. O token vale 30 dias e não tem refresh.
+async function obterTokenLinear() {
+  const resposta = await fetch("https://api.linear.app/oauth/token", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({
+      grant_type: "client_credentials",
+      client_id: LINEAR_CLIENT_ID,
+      client_secret: LINEAR_CLIENT_SECRET,
+      scope: "read",
+    }),
+  });
+  if (!resposta.ok) {
+    throw new Error(`Falha ao obter o token do Linear (${resposta.status}): ${await resposta.text()}`);
+  }
+  const { access_token: token } = await resposta.json();
+  if (!token) throw new Error("A resposta do Linear não trouxe access_token.");
+  return token;
+}
 
 async function buscarIssuesEmProducao(desde) {
   const query = `
@@ -57,6 +79,7 @@ async function buscarIssuesEmProducao(desde) {
     updatedAt: { gt: desde },
   };
 
+  const token = await obterTokenLinear();
   const issues = [];
   let after = null;
   do {
@@ -64,7 +87,7 @@ async function buscarIssuesEmProducao(desde) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: LINEAR_API_KEY,
+        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({ query, variables: { after, filter } }),
     });
